@@ -1,11 +1,64 @@
+// Primary colors
+$bandsite-black: #323232;
+$secondary-font-color: #AFAFAF;
+$primary-font-color: #FFFFFF;
+
+// Secondary colors 
+$bandsite-darkblack: black;
+$divider-line-color: #E1E1E1;
+$alternative-light-bg-color: #FAFAFA;
+
+// Mixins
+
+// Font
+
+
+@font-face {
+    font-family: 'Avenir-Regular';
+    src: url('../assets/Font/AvenirNextLTPro-Regular.woff') format('woff'),
+        url('../assets/Font/AvenirNextLTPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Avenir-Demi';
+    src: url('../assets/Font/AvenirNextLTPro-Demi.woff') format('woff'),
+        url('../assets/Font/AvenirNextLTPro-Demi.woff2') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Avenir-Bold';
+    src: url('../assets/Font/AvenirNextLTPro-Bold.woff') format('woff'),
+        url('../assets/Font/AvenirNextLTPro-Bold.woff2') format('woff');
+    font-weight: 800;
+}
+
+// Mixins
+
+// @mixin mobile-h1-header {
+//     font-size: 24px;
+//     line-height: 32px;
+//     font-weight: 700;
+// }
+
+// @mixin mobile-body-footer-font() {
+//     font-family: "Avenir-Regular";
+//     font-size: 13px;
+//     line-height: 18px;
+//     font-weight: 400;
+// }
+
 
 
 @media (min-width: 320px) and (max-width: 480px) {
     
+    
+
     * {
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: black;
-        color: white;
+        //font-family: Arial, Helvetica, sans-serif;
+        background-color: $bandsite-black;
+        color: $primary-font-color;
     }
 
     a {
@@ -13,12 +66,11 @@
         padding-bottom: 2px;
     }
 
-    a:hover {
-        border-bottom: 2px solid white;
-    }
-    .body {
+    
+    body {
         display: flex;
         flex-wrap: wrap;
+        font-family: 'Avenir-Regular';
     }
 
     .navbar {
@@ -28,9 +80,9 @@
         align-items: center;
 
         &__h1 {
+            font-family: 'Avenir-Bold';
             font-size: 24px;
             line-height: 32px;
-            font-weight: 700;
             text-transform: uppercase;
         }
 
@@ -38,7 +90,6 @@
             display: flex;
             flex-direction: row;
             gap: 10em;
-            text-decoration: none;
         }
     }
 }
