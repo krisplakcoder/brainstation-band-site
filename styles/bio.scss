@@ -8,68 +8,42 @@ $bandsite-darkblack: black;
 $divider-line-color: #E1E1E1;
 $alternative-light-bg-color: #FAFAFA;
 
-// Mixins
+@import "./partials/typography";
 
-// Font
-
-
-@font-face {
-    font-family: 'Avenir-Regular';
-    src: url('../assets/Font/AvenirNextLTPro-Regular.woff') format('woff'),
-        url('../assets/Font/AvenirNextLTPro-Regular.woff2') format('woff2');
-    font-weight: 400;
+@mixin h1__headers {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
 }
 
-@font-face {
-    font-family: 'Avenir-Demi';
-    src: url('../assets/Font/AvenirNextLTPro-Demi.woff') format('woff'),
-        url('../assets/Font/AvenirNextLTPro-Demi.woff2') format('woff');
+@mixin subheader {
+    font-size: 14px;
+    line-height: 22px;
     font-weight: 600;
 }
 
-@font-face {
-    font-family: 'Avenir-Bold';
-    src: url('../assets/Font/AvenirNextLTPro-Bold.woff') format('woff'),
-        url('../assets/Font/AvenirNextLTPro-Bold.woff2') format('woff');
-    font-weight: 800;
+@mixin link-state ($color) {
+    border-bottom: 2px solid $color;
 }
-
-// Mixins
-
-// @mixin mobile-h1-header {
-//     font-size: 24px;
-//     line-height: 32px;
-//     font-weight: 700;
-// }
-
-// @mixin mobile-body-footer-font() {
-//     font-family: "Avenir-Regular";
-//     font-size: 13px;
-//     line-height: 18px;
-//     font-weight: 400;
-// }
 
 
 
 @media (min-width: 320px) and (max-width: 480px) {
     
-    
-
     * {
         //font-family: Arial, Helvetica, sans-serif;
         background-color: $bandsite-black;
         color: $primary-font-color;
-    }
+    };
 
     a {
         text-decoration: none;
         padding-bottom: 2px;
-    }
+    };
 
-    
     body {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         font-family: 'Avenir-Regular';
     }
 
@@ -79,11 +53,9 @@ $alternative-light-bg-color: #FAFAFA;
         flex-direction: column;
         align-items: center;
 
-        &__h1 {
-            font-family: 'Avenir-Bold';
-            font-size: 24px;
-            line-height: 32px;
-            text-transform: uppercase;
+        &__img {
+            width: 10em;
+            margin: 1.5em auto;
         }
 
         &__links {
@@ -91,5 +63,32 @@ $alternative-light-bg-color: #FAFAFA;
             flex-direction: row;
             gap: 10em;
         }
+
+        &__links:hover {
+            @include link-state($divider-line-color);
+        }
     }
+
+    .hero {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1em;
+        // width: 100%;
+        // height: 0em;
+
+        &__image {
+            object-fit: contain;
+            width: 100%;
+           
+        }
+
+        &__title {
+            position: absolute;
+            background: none;
+            margin-left: 1em;
+        }
+    }
+
 }
