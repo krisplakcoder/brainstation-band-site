@@ -25,3 +25,32 @@
     line-height: 18px;
     font-weight: 400;
 }
+
+@mixin cta-link {
+    color: $secondary-font-color;
+    font-size: 1.0rem;
+    padding-bottom: 0.5em;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+}
+
+@mixin body-frame ($flexdirection) {
+    margin: 0em;
+    display: flex;
+    flex-direction: $flexdirection;
+    font-family: 'Avenir-Regular';
+    max-width: 100%;
+}
+
+@mixin hero-title-style ($fontsize){
+    position: absolute;
+    background: none;
+    top: 50%;
+    left: 10%;
+    @include h1__headers();
+    font-size: $fontsize;
+    color: white;
+    z-index: 5;
+}

@@ -38,11 +38,10 @@
     align-items: center;
     margin-bottom: 0em;
     padding-bottom: 12px;
-    position: relative;
     height: 7em;
   }
   .navbar__img {
-    width: 10em;
+    width: 30%;
     margin: 4rem auto;
   }
   .navbar__links {
@@ -151,6 +150,9 @@
     padding-bottom: 1rem;
     padding-top: 2rem;
   }
+  .footer__social--h1 {
+    font-size: 2rem;
+  }
   .bandsite-logo {
     width: 25%;
     margin-bottom: 1.5rem;
@@ -163,5 +165,47 @@
     display: flex;
     justify-content: space-between;
     width: 20%;
+  }
+}
+@media (min-width: 787px) and (max-width: 1279px) {
+  * {
+    background-color: #323232;
+  }
+  body {
+    margin: 0em;
+    display: flex;
+    flex-direction: column;
+    font-family: "Avenir-Regular";
+    max-width: 100%;
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+  }
+  .hero__image {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__title {
+    position: absolute;
+    background: none;
+    top: 50%;
+    left: 10%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 4rem;
+    color: white;
+    z-index: 5;
+  }
+  .hero__overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
   }
 }/*# sourceMappingURL=bio.css.map */
