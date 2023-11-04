@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Avenir-Regular";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Demi.woff2") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff");
+  font-weight: 800;
+}
+@media (min-width: 320px) and (max-width: 786px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    padding-bottom: 2px;
+    color: #FFFFFF;
+  }
+  body {
+    margin: 0em;
+    display: flex;
+    flex-direction: column;
+    font-family: "Avenir-Regular";
+    max-width: 100%;
+  }
+  .navbar {
+    position: relative;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0em;
+    padding-bottom: 12px;
+    position: relative;
+    height: 7em;
+  }
+  .navbar__img {
+    width: 10em;
+    margin: 4rem auto;
+  }
+  .navbar__links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+  }
+  .navbar__link {
+    color: #AFAFAF;
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar__link:hover {
+    color: #FAFAFA;
+    border-bottom: 2px solid #E1E1E1;
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+  }
+  .hero__image {
+    display: block;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero__title {
+    position: absolute;
+    background: none;
+    top: 50%;
+    left: 10%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 2rem;
+    color: white;
+    z-index: 5;
+  }
+  .hero__overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+  }
+  .bio {
+    background-color: #FAFAFA;
+    color: #323232;
+    padding: 0em 1rem;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+  .bio__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 2rem;
+    padding-left: 1em;
+  }
+  .bio__quote {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1em;
+  }
+  .bio__image {
+    padding: 0.5rem 0rem;
+  }
+  .gallery {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  .gallery__title {
+    background: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #323232;
+    padding-left: 2rem;
+  }
+  .gallery__image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0.5rem 1rem;
+  }
+  .footer {
+    background-color: #323232;
+    color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+  .bandsite-logo {
+    width: 25%;
+    margin-bottom: 1.5rem;
+    margin-top: 10%;
+  }
+  .contact__heading {
+    font-weight: 600;
+  }
+  .social__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+}/*# sourceMappingURL=bio.css.map */

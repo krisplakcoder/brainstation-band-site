@@ -1,0 +1,27 @@
+@mixin h1__headers {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+@mixin subheader () {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+
+@mixin divider {
+    border-bottom: 2px solid $divider-line-color;
+}
+
+@mixin image_size {
+    object-fit: contain;
+    width: 100%;
+}
+
+@mixin footer_copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+}
