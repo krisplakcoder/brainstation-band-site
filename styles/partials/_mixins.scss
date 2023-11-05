@@ -91,3 +91,20 @@
     // margin-right: 0em;
     // margin-left: 0em; 
 }
+
+@mixin footer-style {
+    background-color: $bandsite-black;
+    color: $alternative-light-bg-color;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+@mixin icon-style ($width) {
+    display: flex;
+    justify-content: space-between;
+    width: $width;
+}

@@ -348,4 +348,61 @@ $alternative-light-bg-color: #FAFAFA;
             padding: 0.5rem 0.5rem;
         }
     }
+
+    .footer {
+        @include footer-style;
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        &__social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            
+
+            &--h1 {
+                @include h1__headers;
+                font-size: 2.5rem;
+            }
+        }
+
+        &__endnote {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        line-height: 1.5rem;
+
+        &__heading {
+            font-weight: 600;
+        }
+    }
+
+    .social__icons {
+        @include  icon-style(30%);
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        align-content: end;
+        align-items: end;
+    }
+
+    .icons {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .bandsite-logo {
+        position: absolute;
+        top: 4.5rem;
+        right: 3rem;
+    }
 }
