@@ -121,7 +121,7 @@
     padding: 0.5rem 0rem;
   }
   .gallery {
-    background-color: #FFFFFF;
+    background-color: #FAFAFA;
     box-sizing: border-box;
     margin-right: 0em;
     margin-left: 0em;
@@ -138,7 +138,6 @@
     -o-object-fit: contain;
        object-fit: contain;
     width: 100%;
-    background-color: #FFFFFF;
     padding: 0.5rem 1rem;
   }
   .footer {
@@ -221,7 +220,7 @@
     width: fit-content;
   }
   .navbar__link:hover {
-    color: #FAFAFA;
+    color: #FFFFFF;
     border-bottom: 2px solid #E1E1E1;
   }
   .hero {
@@ -253,5 +252,83 @@
     width: 100%;
     bottom: 0;
     height: auto;
+  }
+  .bio {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #FAFAFA;
+  }
+  .bio__image {
+    display: block;
+    width: 80%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: auto;
+  }
+  .bio__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+  .bio__quote {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.5em;
+    line-height: 2rem;
+    margin-top: 2rem;
+    padding: 0em 5rem;
+  }
+  .bio__quote--source {
+    font-size: 1em;
+  }
+  .bio__subheader {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    padding-left: 5rem;
+  }
+  .bio__blurb {
+    -moz-columns: 2;
+         columns: 2;
+    text-align: left;
+    padding: 0em 5rem;
+  }
+  .bio__blurb > p {
+    margin-top: 0em;
+  }
+  .gallery {
+    background-color: #FAFAFA;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+  }
+  .gallery__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+  .gallery__container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .gallery__image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 30%;
+    padding: 0.5rem 0.5rem;
   }
 }/*# sourceMappingURL=bio.css.map */

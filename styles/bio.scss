@@ -129,7 +129,7 @@ $alternative-light-bg-color: #FAFAFA;
     }
 
     .gallery {
-        background-color: $primary-font-color;
+        background-color: $alternative-light-bg-color;
         box-sizing: border-box;
         margin-right: 0em;
         margin-left: 0em; 
@@ -142,8 +142,8 @@ $alternative-light-bg-color: #FAFAFA;
         }
 
         &__image {
-            @include image_size();
-            background-color: $primary-font-color;
+            @include image_size(100%);
+            // background-color: $primary-font-color;
             padding: 0.5rem 1rem;
         }       
     }
@@ -227,7 +227,7 @@ $alternative-light-bg-color: #FAFAFA;
             width: fit-content;
 
             &:hover {
-                color: $alternative-light-bg-color;
+                color: $primary-font-color;
                 @include divider; 
             }
         }
@@ -265,6 +265,87 @@ $alternative-light-bg-color: #FAFAFA;
             // bottom: 0;
             // height: auto;
             @include hero-overlay;
+        }
+    }
+
+    .bio {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        background-color: $alternative-light-bg-color;
+    
+        &__image {
+            display: block;
+            width: 80%;
+            object-fit: cover;
+            margin: auto;
+        }
+
+        &__title {
+            @include h1__headers();
+            font-size: 3rem;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        &__quote {
+            @include subheader();
+            text-align: left;
+            font-size: 1.5em;
+            line-height: 2rem;
+            margin-top: 2rem;
+            padding: 0em 5rem;
+
+            &--source {
+                font-size: 1em;
+            }
+        }
+
+        &__subheader {
+            @include h1__headers();
+            padding-left: 5rem;
+        }
+
+        &__blurb {
+            columns: 2;
+            text-align: left;
+            padding: 0em 5rem;
+
+            & > p {
+                margin-top: 0em;
+            }
+        }
+
+    }
+
+    .gallery {
+        @include gallery-style();
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        
+
+        &__title {
+            @include h1__headers;
+            font-size: 2rem;
+            padding-left: 2rem;
+
+        }
+
+        &__container {
+            width: 100%;
+            margin: auto;
+            text-align: center;    
+        }
+        &__image {
+            @include image_size(30%);
+            padding: 0.5rem 0.5rem;
         }
     }
 }
