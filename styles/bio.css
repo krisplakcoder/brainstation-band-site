@@ -56,6 +56,7 @@
     color: #AFAFAF;
     font-size: 1rem;
     padding-bottom: 0.5em;
+    text-decoration: none;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
@@ -169,7 +170,7 @@
 }
 @media (min-width: 787px) and (max-width: 1279px) {
   * {
-    background-color: #323232;
+    box-sizing: border-box;
   }
   body {
     margin: 0em;
@@ -177,6 +178,51 @@
     flex-direction: column;
     font-family: "Avenir-Regular";
     max-width: 100%;
+  }
+  .navbar {
+    position: relative;
+    background-color: #323232;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0em;
+    padding-bottom: 12px;
+    height: 5rem;
+    align-content: space-around;
+    width: 100%;
+  }
+  .navbar__img {
+    width: 120px;
+    height: 20px;
+    margin: auto 2rem;
+  }
+  .navbar__links {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    height: 3.25rem;
+  }
+  .navbar__link {
+    color: #AFAFAF;
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    padding-left: 0em;
+    padding-right: 0em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navbar__link:hover {
+    color: #FAFAFA;
+    border-bottom: 2px solid #E1E1E1;
   }
   .hero {
     position: relative;

@@ -30,6 +30,7 @@
     color: $secondary-font-color;
     font-size: 1.0rem;
     padding-bottom: 0.5em;
+    text-decoration: none;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
@@ -53,4 +54,33 @@
     font-size: $fontsize;
     color: white;
     z-index: 5;
+}
+
+@mixin hero-overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+}
+
+@mixin navbar-design ($bgcolor, $flexdirection, $height) {
+    position: relative;
+        background-color: $bgcolor;
+        display: flex;
+        flex-direction: $flexdirection;
+        align-items: center;
+        margin-bottom: 0em;
+        padding-bottom: 12px;
+        height: $height;
+}
+
+@mixin navbar-links-design ($width, $justifycontent) {
+    width: $width;
+    display: flex;
+    flex-direction: row;
+    justify-content: $justifycontent;
+    // position: $position;
+    // bottom: $bottom;
 }

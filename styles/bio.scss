@@ -63,6 +63,7 @@ $alternative-light-bg-color: #FAFAFA;
         &__link {
            @include cta-link;
         }
+
         &__link:hover {
             color: $alternative-light-bg-color;
             @include divider;
@@ -187,11 +188,50 @@ $alternative-light-bg-color: #FAFAFA;
 @media (min-width: 787px) and (max-width: 1279px) {
 
     * {
-        background-color: #323232;
+        // background-color: #323232;
+        // padding: 0em 1rem;
+        box-sizing: border-box;
     }
 
     body {
         @include body-frame(column);
+    }
+
+    .navbar {
+        @include navbar-design($bandsite-black, row, 5rem);
+        align-content: space-around;
+        width: 100%;
+
+        &__img {
+            width: 120px;
+            height: 20px;
+            margin: auto 2rem;
+        }
+
+        &__links {
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            // width: 25%;
+            @include navbar-links-design(25%, space-between);
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            height: 3.25rem;
+        }
+
+        &__link {
+            @include cta-link;
+            padding-left: 0em;
+            padding-right: 0em;
+            width: fit-content;
+
+            &:hover {
+                color: $alternative-light-bg-color;
+                @include divider; 
+            }
+        }
+
     }
 
     .hero {
@@ -218,13 +258,13 @@ $alternative-light-bg-color: #FAFAFA;
         }
 
         &__overlay {
-            position: absolute;
-            background-color: rgba(0,0,0,0.5);
-            top: 0;
-            width: 100%;
-            bottom: 0;
-            height: auto;
+            // position: absolute;
+            // background-color: rgba(0,0,0,0.5);
+            // top: 0;
+            // width: 100%;
+            // bottom: 0;
+            // height: auto;
+            @include hero-overlay;
+        }
     }
-}
-
 }
