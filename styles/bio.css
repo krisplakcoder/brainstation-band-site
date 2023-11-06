@@ -157,7 +157,11 @@
     -o-object-fit: contain;
        object-fit: contain;
     width: 100%;
+    filter: grayscale(1);
     padding: 0.5rem 1rem;
+  }
+  .gallery__image:hover {
+    filter: grayscale(0);
   }
   .footer {
     background-color: #323232;
@@ -371,6 +375,10 @@
        object-fit: contain;
     width: 30%;
     padding: 0.5rem 0.5rem;
+    filter: grayscale(1);
+  }
+  .gallery__image:hover {
+    filter: grayscale(0);
   }
   .footer {
     background-color: #323232;
@@ -625,6 +633,10 @@
        object-fit: contain;
     width: 30%;
     padding: 0.5rem 0.5rem;
+    filter: grayscale(1);
+  }
+  .gallery__image:hover {
+    filter: grayscale(0);
   }
   .footer {
     background-color: #323232;

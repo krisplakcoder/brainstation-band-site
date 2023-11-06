@@ -11,6 +11,7 @@ $alternative-light-bg-color: #FAFAFA;
 // Dimensions
 $bio-desk-section-width: 50%;
 
+
 @import "./partials/typography";
 
 @import "./partials/mixins";
@@ -143,8 +144,13 @@ $bio-desk-section-width: 50%;
 
         &__image {
             @include image_size(100%);
+            filter: grayscale(1);
             // background-color: $primary-font-color;
             padding: 0.5rem 1rem;
+
+                &:hover {
+                    filter: grayscale(0);
+                }
         }       
     }
 
@@ -353,6 +359,11 @@ $bio-desk-section-width: 50%;
         &__image {
             @include image_size(30%);
             padding: 0.5rem 0.5rem;
+            filter: grayscale(1);
+
+                &:hover {
+                    filter: grayscale(0);
+                }
         }
     }
 
@@ -469,7 +480,6 @@ $bio-desk-section-width: 50%;
     .hero {
         @include hero-container-style(40em);
         
-    
         &__image {
             display: block;
             width: 100%;
@@ -576,6 +586,11 @@ $bio-desk-section-width: 50%;
         &__image {
             @include image_size(30%);
             padding: 0.5rem 0.5rem;
+            filter: grayscale(1);
+
+                &:hover {
+                    filter: grayscale(0);
+                }
         }
     }
 
