@@ -89,12 +89,13 @@ $bio-desk-section-width: 50%;
         }
 
         &__overlay {
-            position: absolute;
-            background-color: rgba(0,0,0,0.5);
-            top: 0;
-            width: 100%;
-            bottom: 0;
-            height: 100%;
+            // position: absolute;
+            // background-color: rgba(0,0,0,0.5);
+            // top: 0;
+            // width: 100%;
+            // bottom: 0;
+            // height: 100%;
+            @include hero-overlay;
     }
 }
 
@@ -446,7 +447,7 @@ $bio-desk-section-width: 50%;
             @include navbar-links-design(10%, space-between);
             position: absolute;
             bottom: 0;
-            left: 20%;
+            left: 25%;
             height: 3.5rem;
             @include desktop-body;
         }
@@ -466,8 +467,8 @@ $bio-desk-section-width: 50%;
     }
 
     .hero {
-        position: relative;
-        width: 100%;
+        @include hero-container-style(40em);
+        
     
         &__image {
             display: block;
@@ -478,6 +479,7 @@ $bio-desk-section-width: 50%;
         &__title {
             @include hero-title-style;
             @include desktop-page-header;
+            padding-left: 2rem;
         }
 
         &__overlay {
@@ -517,14 +519,16 @@ $bio-desk-section-width: 50%;
         &__quote {
             @include desktop-subheader;
             text-align: left;
-            font-size: 1.5em;
+            font-size: 1.25rem;
             line-height: 2rem;
-            margin: 2rem auto;
+            margin: 2rem, auto, 1rem, auto;
             width: $bio-desk-section-width;
 
 
             &--source {
-                font-size: 1em;
+                @include desktop-body;
+                font-size: 1rem;
+                font-weight: 700;
             }
         }
 
@@ -578,14 +582,14 @@ $bio-desk-section-width: 50%;
     .footer {
         @include footer-style;
         position: relative;
-        padding-left: 4.5rem;
+        padding-left: 10rem;
 
         &__social {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            width: 30%;
+            width: 40%;
             
 
             &--h1 {
@@ -628,7 +632,7 @@ $bio-desk-section-width: 50%;
     .bandsite-logo {
         position: absolute;
         top: 4.5rem;
-        right: 9.5rem;
+        right: 21rem;
         @include bandsite-logo-style;
     }
 }
