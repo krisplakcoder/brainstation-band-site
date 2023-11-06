@@ -53,6 +53,7 @@ $bio-desk-section-width: 50%;
 
         &__links {
             // border: 2px solid white;
+            @include mobile-body-footer-text;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -73,15 +74,18 @@ $bio-desk-section-width: 50%;
     .hero {
         position: relative;
         width: 100%;
+        // height: 12em;
     
         &__image {
             display: block;
             width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
         &__title {
-            @include hero-title-style(2rem);
+            @include hero-title-style;
+            @include mobile-page-section-header;
         }
 
         &__overlay {
@@ -90,7 +94,7 @@ $bio-desk-section-width: 50%;
             top: 0;
             width: 100%;
             bottom: 0;
-            height: auto;
+            height: 100%;
     }
 }
 
@@ -102,14 +106,14 @@ $bio-desk-section-width: 50%;
         margin-top: 2rem;
 
         &__title {
-            @include h1__headers();
+            @include mobile-page-section-header();
             font-size: 2rem;
             padding-left: 1em;
             
         }
 
         &__quote {
-            @include subheader();
+            @include mobile-subheader;
             text-align: left;
             font-size: 1em;
         }
@@ -128,7 +132,7 @@ $bio-desk-section-width: 50%;
 
         &__title {
             background: none;
-            @include h1__headers();
+            @include mobile-page-section-header;
             color: $bandsite-black;
             padding-left: 2rem;
         }
@@ -149,9 +153,10 @@ $bio-desk-section-width: 50%;
         padding-left: 1rem;
         padding-bottom: 1rem;
         padding-top: 2rem;
+        @include mobile-body-footer-text;
 
         &__social--h1 {
-            font-size: 2rem;
+            font-weight: 700;
         }
 
         
@@ -165,7 +170,7 @@ $bio-desk-section-width: 50%;
     }
 
     .contact__heading {
-        font-weight: 600;
+        font-weight: 700;
     }
 
     .social__icons {
@@ -205,6 +210,7 @@ $bio-desk-section-width: 50%;
             // flex-direction: row;
             // justify-content: space-between;
             // width: 25%;
+            @include mobile-body-footer-text;
             @include navbar-links-design(25%, space-between);
             position: absolute;
             bottom: 0;
@@ -227,8 +233,9 @@ $bio-desk-section-width: 50%;
     }
 
     .hero {
-        position: relative;
-        width: 100%;
+        
+        @include hero-container-style(30em);
+        
     
         &__image {
             display: block;
@@ -246,7 +253,8 @@ $bio-desk-section-width: 50%;
         //     color: white;
         //     z-index: 5;
         // }
-            @include hero-title-style(4rem);
+            @include hero-title-style;
+            @include desktop-page-header;
         }
 
         &__overlay {
@@ -278,7 +286,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__title {
-            @include h1__headers();
+            @include desktop-section-header;
             font-size: 3rem;
             margin-top: 5rem;
             margin-bottom: 2rem;
@@ -286,7 +294,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__quote {
-            @include subheader();
+            @include desktop-subheader;
             text-align: left;
             font-size: 1.5em;
             line-height: 2rem;
@@ -299,7 +307,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__subheader {
-            @include h1__headers();
+            @include desktop-section-header;
             padding-left: 5rem;
         }
 
@@ -324,7 +332,7 @@ $bio-desk-section-width: 50%;
         
 
         &__title {
-            @include h1__headers;
+            @include desktop-subheader;
             font-size: 2rem;
             padding-left: 2rem;
 
@@ -346,6 +354,7 @@ $bio-desk-section-width: 50%;
         position: relative;
         padding-left: 3rem;
         padding-right: 3rem;
+        @include desktop-footer;
 
         &__social {
             display: flex;
@@ -356,8 +365,7 @@ $bio-desk-section-width: 50%;
             
 
             &--h1 {
-                @include h1__headers;
-                font-size: 2.5rem;
+                @include desktop-section-header;
             }
         }
 
@@ -420,7 +428,7 @@ $bio-desk-section-width: 50%;
         padding-left: 10rem;
 
         &__img {
-            @include bandsit-logo-style;
+            @include bandsite-logo-style;
             padding-top: 1rem;
         }
 
@@ -434,6 +442,7 @@ $bio-desk-section-width: 50%;
             bottom: 0;
             left: 20%;
             height: 3.5rem;
+            @include desktop-body;
         }
 
         &__link {
@@ -461,25 +470,11 @@ $bio-desk-section-width: 50%;
         }
 
         &__title {
-        //     position: absolute;
-        //     background: none;
-        //     top: 50%;
-        //     left: 10%;
-        //     @include h1__headers();
-        //     font-size: 2rem;
-        //     color: white;
-        //     z-index: 5;
-        // }
-            @include hero-title-style(4rem);
+            @include hero-title-style;
+            @include desktop-page-header;
         }
 
         &__overlay {
-            // position: absolute;
-            // background-color: rgba(0,0,0,0.5);
-            // top: 0;
-            // width: 100%;
-            // bottom: 0;
-            // height: auto;
             @include hero-overlay;
         }
     }
@@ -505,7 +500,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__title {
-            @include h1__headers();
+            @include desktop-section-header;
             font-size: 3rem;
             margin-top: 5rem;
             margin-bottom: 2rem;
@@ -514,7 +509,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__quote {
-            @include subheader();
+            @include desktop-subheader;
             text-align: left;
             font-size: 1.5em;
             line-height: 2rem;
@@ -528,7 +523,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__subheader {
-            @include h1__headers();
+            @include desktop-subheader;
             width: $bio-desk-section-width;
             justify-content: start;
         }
@@ -558,16 +553,13 @@ $bio-desk-section-width: 50%;
         
 
         &__title {
-            @include h1__headers;
-            font-size: 2rem;
-            padding-left: 2rem;
-            width: 95%;
+            @include desktop-section-header;
             justify-content: start;
-
+            width: 75%;
         }
 
         &__container {
-            width: 100%;
+            width: 80%;
             margin: auto;
             text-align: center;    
         }
@@ -591,8 +583,7 @@ $bio-desk-section-width: 50%;
             
 
             &--h1 {
-                @include h1__headers;
-                font-size: 2.5rem;
+                @include desktop-section-header;
             }
         }
 
@@ -607,7 +598,7 @@ $bio-desk-section-width: 50%;
         justify-content: space-between;
         width: 50%;
         margin-bottom: 4rem;
-        line-height: 1.5rem;
+        @include desktop-footer;
 
         &__heading {
             font-weight: 600;
@@ -632,6 +623,6 @@ $bio-desk-section-width: 50%;
         position: absolute;
         top: 4.5rem;
         right: 9.5rem;
-        @include bandsit-logo-style;
+        @include bandsite-logo-style;
     }
 }

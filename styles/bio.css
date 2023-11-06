@@ -11,7 +11,7 @@
 @font-face {
   font-family: "Avenir-Bold";
   src: url("../../assets/Font/AvenirNextLTPro-Bold.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff");
-  font-weight: 800;
+  font-weight: 700;
 }
 @media (min-width: 320px) and (max-width: 786px) {
   * {
@@ -46,6 +46,10 @@
     transform: translateY(2em);
   }
   .navbar__links {
+    font-family: "Avenir-Regular";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -74,20 +78,21 @@
   .hero__image {
     display: block;
     width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
   .hero__title {
     position: absolute;
     background: none;
-    top: 50%;
-    left: 10%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    font-size: 2rem;
+    top: 40%;
+    left: 11%;
     color: white;
     z-index: 5;
+    font-family: "Avenir-Bold";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
   }
   .hero__overlay {
     position: absolute;
@@ -95,7 +100,7 @@
     top: 0;
     width: 100%;
     bottom: 0;
-    height: auto;
+    height: 100%;
   }
   .bio {
     background-color: #FFFFFF;
@@ -105,15 +110,17 @@
     margin-top: 2rem;
   }
   .bio__title {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    line-height: 32px;
     font-size: 2rem;
     padding-left: 1em;
   }
   .bio__quote {
-    font-size: 14px;
-    line-height: 22px;
+    font-family: "Avenir-Demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
     text-align: left;
     font-size: 1em;
@@ -129,9 +136,10 @@
   }
   .gallery__title {
     background: none;
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    line-height: 32px;
     color: #323232;
     padding-left: 2rem;
   }
@@ -150,9 +158,13 @@
     padding-left: 1rem;
     padding-bottom: 1rem;
     padding-top: 2rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
   }
   .footer__social--h1 {
-    font-size: 2rem;
+    font-weight: 700;
   }
   .bandsite-logo {
     width: 25%;
@@ -160,7 +172,7 @@
     margin-top: 10%;
   }
   .contact__heading {
-    font-weight: 600;
+    font-weight: 700;
   }
   .social__icons {
     display: flex;
@@ -197,6 +209,10 @@
     margin: auto 2rem;
   }
   .navbar__links {
+    font-family: "Avenir-Regular";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
     width: 25%;
     display: flex;
     flex-direction: row;
@@ -227,6 +243,7 @@
   .hero {
     position: relative;
     width: 100%;
+    height: 30em;
   }
   .hero__image {
     display: block;
@@ -237,14 +254,14 @@
   .hero__title {
     position: absolute;
     background: none;
-    top: 50%;
-    left: 10%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    font-size: 4rem;
+    top: 40%;
+    left: 11%;
     color: white;
     z-index: 5;
+    font-family: "Avenir-Bold";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
   }
   .hero__overlay {
     position: absolute;
@@ -271,17 +288,19 @@
     margin: auto;
   }
   .bio__title {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
     font-size: 3rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
     padding-left: 1.5rem;
   }
   .bio__quote {
-    font-size: 14px;
-    line-height: 22px;
+    font-family: "Avenir-Demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 600;
     text-align: left;
     font-size: 1.5em;
@@ -293,9 +312,10 @@
     font-size: 1em;
   }
   .bio__subheader {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
     padding-left: 5rem;
   }
   .bio__blurb {
@@ -315,9 +335,10 @@
     margin-top: 1.5rem;
   }
   .gallery__title {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
+    font-family: "Avenir-Demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
     font-size: 2rem;
     padding-left: 2rem;
   }
@@ -344,6 +365,11 @@
     position: relative;
     padding-left: 3rem;
     padding-right: 3rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
   }
   .footer__social {
     display: flex;
@@ -353,10 +379,10 @@
     width: 60%;
   }
   .footer__social--h1 {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
-    font-size: 2.5rem;
   }
   .footer__endnote {
     margin-bottom: 4rem;
@@ -433,6 +459,10 @@
     bottom: 0;
     left: 20%;
     height: 3.5rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
   .navbar__link {
     color: #AFAFAF;
@@ -465,14 +495,14 @@
   .hero__title {
     position: absolute;
     background: none;
-    top: 50%;
-    left: 10%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    font-size: 4rem;
+    top: 40%;
+    left: 11%;
     color: white;
     z-index: 5;
+    font-family: "Avenir-Bold";
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
   }
   .hero__overlay {
     position: absolute;
@@ -499,9 +529,10 @@
     margin: auto;
   }
   .bio__title {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
     font-size: 3rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
@@ -509,8 +540,9 @@
     justify-content: start;
   }
   .bio__quote {
-    font-size: 14px;
-    line-height: 22px;
+    font-family: "Avenir-Demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 600;
     text-align: left;
     font-size: 1.5em;
@@ -522,9 +554,10 @@
     font-size: 1em;
   }
   .bio__subheader {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
+    font-family: "Avenir-Demi";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
     width: 50%;
     justify-content: start;
   }
@@ -549,16 +582,15 @@
     margin-bottom: 2rem;
   }
   .gallery__title {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
-    font-size: 2rem;
-    padding-left: 2rem;
-    width: 95%;
     justify-content: start;
+    width: 75%;
   }
   .gallery__container {
-    width: 100%;
+    width: 80%;
     margin: auto;
     text-align: center;
   }
@@ -588,10 +620,10 @@
     width: 30%;
   }
   .footer__social--h1 {
-    font-size: 24px;
+    font-family: "Avenir-Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    line-height: 32px;
-    font-size: 2.5rem;
   }
   .footer__endnote {
     margin-bottom: 4rem;
@@ -602,7 +634,11 @@
     justify-content: space-between;
     width: 50%;
     margin-bottom: 4rem;
-    line-height: 1.5rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
   }
   .contact__heading {
     font-weight: 600;
