@@ -59,7 +59,7 @@
 }
 
 @mixin desktop-section-header {
-    font-family: 'Avenir-Bold';
+    font-family: 'Avenir-Regular';
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-weight: 700;
@@ -89,4 +89,14 @@
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
+}
+
+@mixin mobile-modified-subheader {
+    @include mobile-subheader();
+    font-size: 1.5rem;
+}
+
+@mixin desktop-modified-header {
+    @include desktop-subheader();
+    font-size: 3.75rem;
 }

@@ -85,8 +85,7 @@ $bio-desk-section-width: 50%;
 
         &__title {
             @include hero-title-style;
-            @include mobile-subheader;
-            font-size: 1.5rem;
+            @include mobile-modified-subheader;
         }
 
         &__overlay {
@@ -135,8 +134,7 @@ $bio-desk-section-width: 50%;
 
         &__title {
             background: none;
-            @include mobile-subheader;
-            font-size: 1.5rem;
+            @include mobile-modified-subheader;
             padding-left: 1rem;
             margin-bottom: 0.5rem;
 
@@ -161,8 +159,7 @@ $bio-desk-section-width: 50%;
         @include mobile-body-footer-text;
 
         &__social--h1 {
-            @include mobile-subheader;
-            font-size: 1.5rem;
+            @include mobile-modified-subheader;
         }
 
         
@@ -218,7 +215,7 @@ $bio-desk-section-width: 50%;
             // flex-direction: row;
             // justify-content: space-between;
             // width: 25%;
-            @include mobile-body-footer-text;
+            @include desktop-footer;
             @include navbar-links-design(25%, space-between);
             position: absolute;
             bottom: 0;
@@ -262,7 +259,8 @@ $bio-desk-section-width: 50%;
         //     z-index: 5;
         // }
             @include hero-title-style;
-            @include desktop-page-header;
+            @include desktop-modified-header;
+
         }
 
         &__overlay {
@@ -294,7 +292,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__title {
-            @include desktop-section-header;
+            @include desktop-subheader;
             font-size: 3rem;
             margin-top: 5rem;
             margin-bottom: 2rem;
@@ -304,18 +302,18 @@ $bio-desk-section-width: 50%;
         &__quote {
             @include desktop-subheader;
             text-align: left;
-            font-size: 1.5em;
-            line-height: 2rem;
             margin-top: 2rem;
             padding: 0em 5rem;
 
             &--source {
-                font-size: 1em;
+                @include desktop-body;
+                font-size: 1rem;
+                font-weight: 700;
             }
         }
 
         &__subheader {
-            @include desktop-section-header;
+            @include desktop-subheader;
             padding-left: 5rem;
         }
 
@@ -342,7 +340,7 @@ $bio-desk-section-width: 50%;
         &__title {
             @include desktop-subheader;
             font-size: 2rem;
-            padding-left: 2rem;
+            padding-left: 2.5rem;
 
         }
 
