@@ -8,6 +8,9 @@ $bandsite-darkblack: black;
 $divider-line-color: #E1E1E1;
 $alternative-light-bg-color: #FAFAFA;
 
+// Dimensions
+$bio-desk-section-width: 50%;
+
 @import "./partials/typography";
 
 @import "./partials/mixins";
@@ -27,11 +30,6 @@ $alternative-light-bg-color: #FAFAFA;
     };
 
     body {
-        // margin: 0em;
-        // display: flex;
-        // flex-direction: column;
-        // font-family: 'Avenir-Regular';
-        // max-width: 100%;
         @include body-frame(column)
     }
 
@@ -42,12 +40,14 @@ $alternative-light-bg-color: #FAFAFA;
         flex-direction: column;
         align-items: center;
         margin-bottom: 0em;
-        padding-bottom: 12px;
+        padding-bottom: 1rem;
         height: 7em;
 
         &__img {
-            width: 30%;
-            margin: 4rem auto;
+            width: 7.5rem;
+            height:1.25rem;
+            transform: translateY(2em);
+            
             // border: 1px solid coral;
         }
 
@@ -81,14 +81,6 @@ $alternative-light-bg-color: #FAFAFA;
         }
 
         &__title {
-            // position: absolute;
-            // background: none;
-            // top: 50%;
-            // left: 10%;
-            // @include h1__headers();
-            // font-size: 2rem;
-            // color: white;
-            // z-index: 5;
             @include hero-title-style(2rem);
         }
 
@@ -103,7 +95,7 @@ $alternative-light-bg-color: #FAFAFA;
 }
 
     .bio {
-        background-color: $alternative-light-bg-color;
+        background-color: $primary-font-color;
         color: $bandsite-black;
         padding: 0em 1rem;
         font-size: 1.3rem;
@@ -404,5 +396,242 @@ $alternative-light-bg-color: #FAFAFA;
         position: absolute;
         top: 4.5rem;
         right: 3rem;
+    }
+};
+
+@media (min-width: 1280px){
+    
+    html, body {
+        overflow-x: hidden;
+        margin: auto;
+    }
+   
+    body {
+        @include body-frame(column);
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0em;
+    }
+
+    .navbar {
+        @include navbar-design($bandsite-black, row, 5rem);
+        align-content: space-around;
+        width: 100%;
+        padding-left: 10rem;
+
+        &__img {
+            @include bandsit-logo-style;
+            padding-top: 1rem;
+        }
+
+        &__links {
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            // width: 25%;
+            @include navbar-links-design(10%, space-between);
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            height: 3.5rem;
+        }
+
+        &__link {
+            @include cta-link;
+            padding-left: 0em;
+            padding-right: 0em;
+            width: fit-content;
+
+            &:hover {
+                color: $primary-font-color;
+                @include divider; 
+            }
+        }
+
+    }
+
+    .hero {
+        position: relative;
+        width: 100%;
+    
+        &__image {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__title {
+        //     position: absolute;
+        //     background: none;
+        //     top: 50%;
+        //     left: 10%;
+        //     @include h1__headers();
+        //     font-size: 2rem;
+        //     color: white;
+        //     z-index: 5;
+        // }
+            @include hero-title-style(4rem);
+        }
+
+        &__overlay {
+            // position: absolute;
+            // background-color: rgba(0,0,0,0.5);
+            // top: 0;
+            // width: 100%;
+            // bottom: 0;
+            // height: auto;
+            @include hero-overlay;
+        }
+    }
+
+    .bio {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        // padding-left: 4rem;
+        // padding-right: 8rem;
+        // margin-right: 0em;
+
+        background-color: $primary-font-color;
+    
+        &__image {
+            display: block;
+            width: $bio-desk-section-width;
+            object-fit: cover;
+            margin: auto;
+        }
+
+        &__title {
+            @include h1__headers();
+            font-size: 3rem;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            width: 65%;
+            justify-content: start;
+        }
+
+        &__quote {
+            @include subheader();
+            text-align: left;
+            font-size: 1.5em;
+            line-height: 2rem;
+            margin: 2rem auto;
+            width: $bio-desk-section-width;
+
+
+            &--source {
+                font-size: 1em;
+            }
+        }
+
+        &__subheader {
+            @include h1__headers();
+            width: $bio-desk-section-width;
+            justify-content: start;
+        }
+
+        &__blurb {
+            columns: 2;
+            text-align: left;
+            padding: 0em 5rem;
+            width: $bio-desk-section-width;
+            margin: auto;
+
+            & > p {
+                margin-top: 0em;
+            }
+        }
+
+    }
+
+    .gallery {
+        @include gallery-style();
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        margin-bottom: 2rem;
+        
+
+        &__title {
+            @include h1__headers;
+            font-size: 2rem;
+            padding-left: 2rem;
+            width: 95%;
+            justify-content: start;
+
+        }
+
+        &__container {
+            width: 100%;
+            margin: auto;
+            text-align: center;    
+        }
+        &__image {
+            @include image_size(30%);
+            padding: 0.5rem 0.5rem;
+        }
+    }
+
+    .footer {
+        @include footer-style;
+        position: relative;
+        padding-left: 4.5rem;
+
+        &__social {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            
+
+            &--h1 {
+                @include h1__headers;
+                font-size: 2.5rem;
+            }
+        }
+
+        &__endnote {
+            margin-bottom: 4rem;
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        margin-bottom: 4rem;
+        line-height: 1.5rem;
+
+        &__heading {
+            font-weight: 600;
+        }
+    }
+
+    .social__icons {
+        @include  icon-style(30%);
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+        align-content: end;
+        align-items: end;
+    }
+
+    .icons {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .bandsite-logo {
+        position: absolute;
+        top: 4.5rem;
+        right: 9.5rem;
+        @include bandsit-logo-style;
     }
 }
