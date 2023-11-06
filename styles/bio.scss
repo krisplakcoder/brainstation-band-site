@@ -85,7 +85,8 @@ $bio-desk-section-width: 50%;
 
         &__title {
             @include hero-title-style;
-            @include mobile-page-section-header;
+            @include mobile-subheader;
+            font-size: 1.5rem;
         }
 
         &__overlay {
@@ -102,20 +103,22 @@ $bio-desk-section-width: 50%;
         background-color: $primary-font-color;
         color: $bandsite-black;
         padding: 0em 1rem;
-        font-size: 1.3rem;
         margin-top: 2rem;
+        @include mobile-body-footer-text;
 
         &__title {
-            @include mobile-page-section-header();
-            font-size: 2rem;
-            padding-left: 1em;
-            
+            @include mobile-subheader;
+            font-size: 1.5rem;
         }
 
         &__quote {
             @include mobile-subheader;
             text-align: left;
-            font-size: 1em;
+        }
+
+        &__subheader {
+            @include mobile-body-footer-text;
+            font-weight: 700;
         }
 
         &__image {
@@ -132,9 +135,11 @@ $bio-desk-section-width: 50%;
 
         &__title {
             background: none;
-            @include mobile-page-section-header;
-            color: $bandsite-black;
-            padding-left: 2rem;
+            @include mobile-subheader;
+            font-size: 1.5rem;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+
         }
 
         &__image {
@@ -156,7 +161,8 @@ $bio-desk-section-width: 50%;
         @include mobile-body-footer-text;
 
         &__social--h1 {
-            font-weight: 700;
+            @include mobile-subheader;
+            font-size: 1.5rem;
         }
 
         
@@ -176,8 +182,10 @@ $bio-desk-section-width: 50%;
     .social__icons {
         display: flex;
         justify-content: space-between;
-        width: 20%;
+        width: 45%;
     }
+
+  
 
 
 }
