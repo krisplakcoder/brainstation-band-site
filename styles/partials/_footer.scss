@@ -1,0 +1,69 @@
+@import 'typography';
+@import 'mixins';
+@import 'breakpoints';
+@import 'variables';
+
+
+
+@include mobile {
+    .footer {
+        @include mobile-body-footer-text;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: $bandsite-black;
+        color: $primary-font-color;
+        margin: auto, 1em;
+        box-sizing: border-box;
+
+        &--h1 {
+            @include mobile-page-section-header;
+        }
+       
+    }
+
+    .contact__heading {
+        font-weight: 700;
+    }
+}
+
+// .footer {
+//     @include footer-style;
+//     position: relative;
+//     padding-left: 10rem;
+
+//     &__social {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+//         width: 40%;
+        
+
+//         &--h1 {
+//             @include desktop-section-header;
+//         }
+//     }
+
+//     &__endnote {
+//         margin-bottom: 4rem;
+//     }
+// }
+
+// .contact__heading {
+//     font-weight: 700;
+// }
+
+// .social__icons {
+//     display: flex;
+//     justify-content: space-between;
+//     width: 45%;
+// }
+
+
+// .bandsite-logo {
+//     width: 25%;
+//     margin-bottom: 1.5rem;
+//     margin-top: 10%;
+// }
+

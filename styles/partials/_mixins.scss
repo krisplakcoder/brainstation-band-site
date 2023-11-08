@@ -10,6 +10,7 @@
 //     font-weight: 600;
 // }
 
+@import 'variables';
 
 @mixin divider {
     border-bottom: 2px solid $divider-line-color;
