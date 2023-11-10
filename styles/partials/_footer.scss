@@ -3,27 +3,44 @@
 @import 'breakpoints';
 @import 'variables';
 
+@mixin footer-style {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: $bandsite-black;
+    color: $primary-font-color;
+    padding: 0em 1rem;
+    box-sizing: border-box;
+}
+
 
 
 @include mobile {
     .footer {
         @include mobile-body-footer-text;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        background-color: $bandsite-black;
-        color: $primary-font-color;
-        margin: auto, 1em;
-        box-sizing: border-box;
+        @include footer-style;
 
         &--h1 {
             @include mobile-page-section-header;
         }
        
+        &__endnote {
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+            font-size: 0.625rem;
+        }
     }
 
     .contact__heading {
         font-weight: 700;
+    }
+}
+
+@include tablet {
+
+    .footer {
+        @include desktop-body;
+        background-color: aquamarine;
     }
 }
 
