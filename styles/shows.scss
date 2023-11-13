@@ -3,3 +3,12 @@
 @import './partials/variables';
 @import './partials/typography';
 @import './partials/shows-hero';
+@import './partials/shows-main';
+
+
+body {
+    margin: 0em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
