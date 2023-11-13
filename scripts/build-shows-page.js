@@ -100,8 +100,8 @@ const buttonPressed = e => {
     
     for (i = 0; i < buttons.length; i++){
         if (buttons[i] === e.target) {
-            if (buttons[i].parentElement.style.backgroundColor === "#e1e1e1") { buttons[i].parentElement.style.backgroundColor = "white";}
-            else {buttons[i].parentElement.style.backgroundColor = "#e1e1e1";}
+            if (buttons[i].parentElement.style.backgroundColor === "gainsboro") { buttons[i].parentElement.style.backgroundColor = "white";}
+            else {buttons[i].parentElement.style.backgroundColor = "gainsboro";}
         } else {buttons[i].parentElement.style.backgroundColor = "white";}
         // if (buttons[i].parentElement.style.backgroundColor === "white") {
         //     e.target.parentElement.style.backgroundColor = "#e1e1e1"; }

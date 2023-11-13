@@ -51,3 +51,50 @@
     }  
     
 }
+
+@include tablet {
+    header {
+        box-sizing: border-box;
+        @include mobile-body-footer-text;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-content: center;
+        background-color: $bandsite-black;
+    }
+
+    .navbar {
+        @include navbar-design($bandsite-black, row, 5rem);
+        align-content: space-around;
+        width: 100%;
+
+        &__img {
+            width: 120px;
+            height: 20px;
+            margin: auto 2rem;
+            padding-top: 1rem;
+        }
+
+        &__links {
+            @include desktop-footer;
+            @include navbar-links-design(25%, space-between);
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            height: 3.25rem;
+        }
+
+        &__link {
+            @include cta-link;
+            padding-left: 0em;
+            padding-right: 0em;
+            width: fit-content;
+
+            &:hover {
+                color: $primary-font-color;
+                @include divider; 
+            }
+        }
+
+    }
+}
