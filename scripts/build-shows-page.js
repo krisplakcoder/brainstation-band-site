@@ -93,3 +93,58 @@ for (i = 0; i < showSchedule.length; i++) {
     newListItem.appendChild(showButton);
     showButton.innerText = "Buy Tickets";
 }
+
+const buttons = document.getElementsByTagName('button');
+
+const buttonPressed = e => {
+    
+    for (i = 0; i < buttons.length; i++){
+        if (buttons[i] === e.target) {
+            if (buttons[i].parentElement.style.backgroundColor === "#e1e1e1") { buttons[i].parentElement.style.backgroundColor = "white";}
+            else {buttons[i].parentElement.style.backgroundColor = "#e1e1e1";}
+        } else {buttons[i].parentElement.style.backgroundColor = "white";}
+        // if (buttons[i].parentElement.style.backgroundColor === "white") {
+        //     e.target.parentElement.style.backgroundColor = "#e1e1e1"; }
+        // else {e.target.parentElement.style.backgroundColor = "white";}
+    }
+}
+
+for (let button of buttons) {
+    button.addEventListener('click', buttonPressed);
+}
+
+// btn[0].addEventListener('click', () => {
+//     btn[0].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+// btn[1].addEventListener('click', () => {
+//     btn[1].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+// btn[2].addEventListener('click', () => {
+//     btn[2].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+// btn[3].addEventListener('click', () => {
+//     btn[3].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+// btn[4].addEventListener('click', () => {
+//     btn[4].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+// btn[5].addEventListener('click', () => {
+//     btn[5].parentElement.style.backgroundColor = "#e1e1e1";
+// })
+
+
+
+// btn[indexButton].addEventListener('click', () => {
+
+//     if (btn[indexButton].parentElement.style.backgroundColor = "#e1e1e1") {
+//         for (i = 0; i < btn.length && i != indexButton; i++) {
+//             btn[i].parentElement.style.backgroundColor = "white";
+//         }
+//     } else {btn[i].parentElement.style.backgroundColor = "e1e1e1";
+//             indexButton = i;}
+// })

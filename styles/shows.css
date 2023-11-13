@@ -41,6 +41,17 @@
   .contact__heading {
     font-weight: 700;
   }
+  .social__icons {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: end;
+    gap: 2em;
+  }
+  .icons {
+    width: auto;
+    height: 100%;
+  }
 }
 @media screen and (min-width: 787px) and (max-width: 1279px) {
   .footer {
@@ -225,7 +236,7 @@
     font-size: 0.8125rem;
     line-height: 1.125rem;
     font-weight: 400;
-    margin: 1rem 0rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;

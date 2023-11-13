@@ -3,10 +3,22 @@
 @import 'breakpoints';
 @import 'variables';
 
+@mixin show-button {
+    background-color: $bandsite-black;
+    color: $primary-font-color;
+    border-radius: 0.25rem;
+    border: none;
+    height: 2.5rem;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
 @include mobile {
     .shows {
         @include mobile-body-footer-text;
-        margin: 1rem 0rem;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;

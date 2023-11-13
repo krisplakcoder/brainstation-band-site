@@ -34,6 +34,19 @@
     .contact__heading {
         font-weight: 700;
     }
+
+    .social__icons {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        align-items: end;
+        gap: 2em;
+    }
+
+    .icons {
+        width: auto;
+        height: 100%;
+    }
 }
 
 @include tablet {
