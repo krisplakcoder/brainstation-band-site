@@ -116,6 +116,72 @@
     right: 10%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: #323232;
+    color: #FFFFFF;
+    padding: 1em 1rem;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 10rem;
+  }
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+  }
+  .footer__social--h1 {
+    font-family: "Avenir-Regular";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+  .footer__endnote {
+    font-family: "Avenir-Regular";
+    margin-bottom: 4rem;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 4rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+  }
+  .contact__heading {
+    font-weight: 600;
+  }
+  .social__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-content: end;
+    align-items: end;
+  }
+  .icons {
+    width: 2rem;
+    height: 2rem;
+  }
+  .bandsite-logo {
+    position: absolute;
+    top: 3.5rem;
+    right: 3rem;
+    height: 1.25rem;
+    width: 7.5rem;
+  }
+}
 @font-face {
   font-family: "Avenir-Regular";
   src: url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2");
@@ -226,6 +292,58 @@
     bottom: 0;
     left: 25%;
     height: 3.25rem;
+  }
+  .navbar__link {
+    color: #AFAFAF;
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    padding-left: 0em;
+    padding-right: 0em;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navbar__link:hover {
+    color: #FFFFFF;
+    border-bottom: 2px solid #E1E1E1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navbar {
+    position: relative;
+    background-color: #323232;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0em;
+    padding-bottom: 12px;
+    height: 5rem;
+    align-content: space-around;
+    width: 100%;
+    padding-left: 10rem;
+  }
+  .navbar__img {
+    height: 1.25rem;
+    width: 7.5rem;
+    padding-top: 1rem;
+  }
+  .navbar__links {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    height: 3.5rem;
+    font-family: "Avenir-Regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
   }
   .navbar__link {
     color: #AFAFAF;
@@ -386,6 +504,57 @@
     z-index: 10;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 100%;
+    max-height: 30%;
+    position: relative;
+    color: white;
+    font-family: "Avenir-Regular";
+  }
+  .hero__image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 100%;
+    height: auto;
+  }
+  .hero__overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    height: 99%;
+  }
+  .hero__title {
+    position: absolute;
+    top: 15%;
+    z-index: 10;
+    width: 40%;
+    height: 40%;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .hero__title--font {
+    font-size: 300%;
+  }
+  .hero__album {
+    font-size: 450%;
+    font-weight: 700;
+  }
+  .hero__music {
+    width: 35%;
+    max-height: 40%;
+    position: absolute;
+    right: 10%;
+    bottom: 50%;
+    z-index: 10;
+  }
+}
 @font-face {
   font-family: "Avenir-Regular";
   src: url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff"), url("../../assets/Font/AvenirNextLTPro-Regular.woff2") format("woff2");
@@ -512,10 +681,12 @@
 @media screen and (min-width: 1280px) {
   .shows {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
     font-family: "Avenir-Regular";
     text-align: left;
     padding-left: 1rem;
+    margin-top: 2.5rem;
   }
   .shows > h1 {
     padding-left: 1rem;
@@ -523,12 +694,15 @@
   .shows__listings {
     padding-left: 1rem;
     padding-right: 1rem;
+    width: 60%;
+    line-height: 3rem;
+    margin-bottom: 2rem;
   }
   .shows__category {
     display: flex;
     flex-direction: row;
     width: 80%;
-    justify-content: space-between;
+    gap: 16rem;
     color: #AFAFAF;
   }
   .shows__list {
@@ -537,6 +711,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border-bottom: 2px solid #E1E1E1;
   }
   .shows__list:hover {
     background-color: #FAFAFA;
@@ -555,7 +730,8 @@
     border: none;
     color: #FFFFFF;
     border-radius: 0.25rem;
-    width: 7rem;
+    width: 10rem;
+    height: 3rem;
   }
   .shows__button:hover {
     background-color: black;
@@ -566,4 +742,5 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }/*# sourceMappingURL=shows.css.map */
