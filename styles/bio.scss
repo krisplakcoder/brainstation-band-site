@@ -1,14 +1,11 @@
-// Primary colors
 $bandsite-black: #323232;
 $secondary-font-color: #AFAFAF;
 $primary-font-color: #FFFFFF;
 
-// Secondary colors 
 $bandsite-darkblack: black;
 $divider-line-color: #E1E1E1;
 $alternative-light-bg-color: #FAFAFA;
 
-// Dimensions
 $bio-desk-section-width: 50%;
 
 
@@ -16,6 +13,7 @@ $bio-desk-section-width: 50%;
 
 @import "./partials/mixins";
 
+@import "./partials/forms";
 
 @media (min-width: 320px) and (max-width: 786px) {
     
@@ -49,11 +47,11 @@ $bio-desk-section-width: 50%;
             height:1.25rem;
             transform: translateY(2em);
             
-            // border: 1px solid coral;
+            
         }
 
         &__links {
-            // border: 2px solid white;
+            
             @include mobile-body-footer-text;
             width: 100%;
             display: flex;
@@ -75,7 +73,7 @@ $bio-desk-section-width: 50%;
     .hero {
         position: relative;
         width: 100%;
-        // height: 12em;
+     
     
         &__image {
             display: block;
@@ -90,12 +88,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__overlay {
-            // position: absolute;
-            // background-color: rgba(0,0,0,0.5);
-            // top: 0;
-            // width: 100%;
-            // bottom: 0;
-            // height: 100%;
+         
             @include hero-overlay;
     }
 }
@@ -145,7 +138,6 @@ $bio-desk-section-width: 50%;
         &__image {
             @include image_size(100%);
             filter: grayscale(1);
-            // background-color: $primary-font-color;
             padding: 0.5rem 1rem;
 
                 &:hover {
@@ -197,8 +189,7 @@ $bio-desk-section-width: 50%;
 @media (min-width: 787px) and (max-width: 1279px) {
 
     * {
-        // background-color: #323232;
-        // padding: 0em 1rem;
+     
         box-sizing: border-box;
     }
 
@@ -218,10 +209,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__links {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // width: 25%;
+         
             @include desktop-footer;
             @include navbar-links-design(25%, space-between);
             position: absolute;
@@ -256,27 +244,14 @@ $bio-desk-section-width: 50%;
         }
 
         &__title {
-        //     position: absolute;
-        //     background: none;
-        //     top: 50%;
-        //     left: 10%;
-        //     @include h1__headers();
-        //     font-size: 2rem;
-        //     color: white;
-        //     z-index: 5;
-        // }
+        
             @include hero-title-style;
             @include desktop-modified-header;
 
         }
 
         &__overlay {
-            // position: absolute;
-            // background-color: rgba(0,0,0,0.5);
-            // top: 0;
-            // width: 100%;
-            // bottom: 0;
-            // height: auto;
+          
             @include hero-overlay;
         }
     }
@@ -451,10 +426,7 @@ $bio-desk-section-width: 50%;
         }
 
         &__links {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // width: 25%;
+        
             @include navbar-links-design(10%, space-between);
             position: absolute;
             bottom: 0;
@@ -504,9 +476,7 @@ $bio-desk-section-width: 50%;
         flex-direction: column;
         align-items: center;
         margin-bottom: 2rem;
-        // padding-left: 4rem;
-        // padding-right: 8rem;
-        // margin-right: 0em;
+      
 
         background-color: $primary-font-color;
     
