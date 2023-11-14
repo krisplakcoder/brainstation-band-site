@@ -11,3 +11,5 @@ node_modules
 CopyDeck
 
 *.css.map
+
+side.js
