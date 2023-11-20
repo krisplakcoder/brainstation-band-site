@@ -372,15 +372,25 @@ header {
   box-sizing: border-box;
   margin: 0;
 }
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .hero {
+    aspect-ratio: 8/3;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 102vh;
+  }
+}
 .hero__image {
   width: 100%;
   -o-object-fit: fill;
      object-fit: fill;
-  height: 70vw;
+  max-height: 100%;
 }
 @media screen and (min-width: 1280px) {
   .hero__image {
-    height: 102vh;
+    height: 100%;
   }
 }
 .hero__image--overlay {
@@ -392,10 +402,9 @@ header {
   top: 0;
   overflow: hidden;
   margin: 0;
-  height: 98.5%;
+  height: 100%;
 }
 .hero-content__container {
-  border: 2px solid coral;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -406,6 +415,11 @@ header {
   width: 100%;
   height: 100%;
   z-index: 5;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .hero-content__container {
+    max-height: 100%;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero-content__container {
@@ -463,7 +477,9 @@ header {
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .hero__music {
     width: 50%;
-    padding-bottom: 5rem;
+    height: 25%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -508,15 +524,26 @@ header {
 .shows {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 100%;
   font-family: "Averni-Regular";
   text-align: left;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .shows {
+    padding: 0 1rem;
+    overflow-x: hidden;
+  }
 }
 .shows__heading {
   font-size: 1.5rem;
   color: #323232;
   padding-left: 1rem;
   font-family: "Averni-Demi";
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .shows__heading {
+    font-size: 2.25rem;
+  }
 }
 .shows-schedule {
   list-style-type: none;
@@ -536,6 +563,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     margin-left: 0;
+    font-size: 0.875rem;
   }
 }
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
@@ -556,6 +584,7 @@ header {
   .shows__label {
     width: 5rem;
     padding-left: 2rem;
+    font-size: 0.75rem;
   }
 }
 .shows__detail {
@@ -587,6 +616,7 @@ header {
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .cta-shows {
     width: 25%;
+    font-size: 0.75rem;
   }
 }
 

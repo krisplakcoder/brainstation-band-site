@@ -12,23 +12,30 @@
     box-sizing: border-box;
     margin: 0;
 
+    @include tablet {
+        aspect-ratio: 8 / 3;
+    }
+
+    @include desktop {
+        height: 102vh;
+    }
+
     &__image {
         width: 100%;
         object-fit: fill;
-        height: 70vw ;
+        max-height: 100%;
 
         @include desktop {
-            height: 102vh;
+            height: 100%;
         }
 
         &--overlay {
             @include hero-image-overlay;
-            height: 98.5%;
+            height:100%;
         }
     }
 
     &-content__container {
-        border: 2px solid coral;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,6 +47,9 @@
         height: 100%;
         z-index: 5;
         
+        @include tablet {
+            max-height: 100%;
+        }
         @include desktop {
             flex-direction: row;
             justify-content: center;
@@ -92,7 +102,9 @@
 
         @include tablet {
             width:50%;
-            padding-bottom: 5rem;;
+            height: 25%;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
         }
 
         @include desktop {
@@ -104,81 +116,3 @@
 
 
 }
-// .hero {
-
-//     @include hero-shows-mobile;
-//     position: relative;
-//     width: 100%;
-
-//     @include tablet {
-//         width: 100%;
-//         max-height: 35em;
-//     }
-
-//     @include desktop {
-     
-//         width: 100%;
-//         max-height: 600px;
-//     }
-
-//     &__image {
-//         width: 100%;
-//         object-fit: fill;
-//         z-index: 0;
-//         margin: 0;
-
-//         &--overlay {
-//             @include hero-image-overlay;
-//         }
-//     }
-
-//     &-title {
-
-//         @include hero-shows-title-mobile;
-//         font-family: 'Averni-Demi';
-        
-//         @include tablet {
-//             @include hero-title;
-//             width: 60%;
-//         }
-
-//         @include desktop {
-//             @include hero-title;
-//             width: 40%;
-//             font-size: 3.75rem;
-//             left: 10%;
-//             bottom: 30%;
-//             font-family: "Averni-Demi";
-//         }
-
-//         &--size {
-//             font-size: 0.8125rem;
-
-//             @include tablet {
-//                 font-size: 1.5rem;
-//             }
-//         }
-//     }
-
-//     &__music {
-
-//         @include hero-shows-music-mobile;
-        
-//         @include tablet {
-//             @include hero-shows-music-tablet;
-//             width: 50%;
-//         }
-
-//         @include desktop {
-
-//             @include hero-shows-music-desktop;
-//             width: 30%;
-//             position: absolute;
-//             top: 30%;
-//             left: 60%;
-
-//         }
-//     }
-
-// }
-
