@@ -17,6 +17,9 @@
         overflow-x: hidden;
     }
 
+    @include desktop {
+    }
+
     &__heading {
         font-size: 1.5rem;
         color: $bandsite-black;
@@ -25,6 +28,12 @@
 
         @include tablet {
             font-size: 2.25rem;
+        }
+
+        @include desktop {
+            padding-left: 8rem;
+            padding-top: 4rem;
+            font-size: 2.5rem;
         }
     }
     
@@ -35,6 +44,7 @@
         border-bottom: 1px solid $mercury;
         padding-right: 1rem;
         padding-top: 1rem;
+        padding-left: 1rem;
         margin: 0;
 
         &:hover {
@@ -49,12 +59,27 @@
             font-size: 0.875rem;
         }
 
+        @include desktop {
+            @include hero-shows-showlist-tablet;
+            max-width: 80%;
+            width: 50%;
+            margin-left: 20%;
+            margin-right: 8rem;
+            padding-left: 8rem;
+            font-size: 1.25rem;
+        }
+
         &--flex {
             @include tablet {
                 width: 60%;
                 border-bottom: none;
                 margin-left: 0;
                 justify-content: space-evenly;
+            }
+
+            @include desktop {
+                padding-right: 10rem;
+                border-bottom: none;
             }
         }
     }
@@ -69,7 +94,11 @@
             width: 5rem;
             padding-left: 2rem;
             font-size: 0.75rem;
+        }
 
+        @include desktop {
+            font-size: 0.75rem;
+            padding-right: 5rem;
         }
         
     }
@@ -107,8 +136,11 @@
 
         @include tablet {
             width: 25%;
-            font-size: 0.75rem;
-            
+            font-size: 0.75rem;         
+        }
+
+        @include desktop {
+            width: 20%;
         }
 
 
