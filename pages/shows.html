@@ -9,68 +9,59 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="../index.html"><img class="navbar__img" src="../assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"></a>
-            <div class="navbar__links">
-                <a href="#bio" class="navbar__link" href="">Biography</a>
-                <a class= "navbar__link" href="">Shows</a>
-            </div>
+            <a href="../index.html"><img class="navbar__image" src="../assets/Logo/Logo-bandsite.svg" alt="band-site logo"></a>
+            <ul class="navbar__links">
+                <a href="../index.html" class="navbar__links-item"><li>Biography</li></a>
+                <a href="./shows.html" class="navbar__links-item"><li>Shows</li></a>
+            </ul>
         </nav>
     </header>
     <section class="hero">
-        <img src="../assets/Images/hero-shows.jpg" alt="audience enjoying show" class="hero__image">
-        <div class="hero__overlay"></div>
-        <article class="hero__title">
-            <p class="hero__title--font">Beautiful Beasts Album</p>
-            <p><span class = "hero__album">Queen of Yellow x For the Strings</span></p>
+        <img class="hero__image" src="../assets/Images/hero-shows.jpg" alt="hero-image">
+        <div class="hero__image--overlay"></div>
+        <article class="hero-content__container">
+            <h1 class="hero-title"><span class="hero-title--size">Beautiful Beasts Album</span><br> 
+            Queen of Yellow x For the Stings</h1>
+            <iframe class = "hero__music" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1439889628&color=ff5500"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/covet-music" title="Covet" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
         </article>
-        <iframe class = "hero__music" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1439889628&color=ff5500"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/covet-music" title="Covet" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
     </section>
-    <main class="shows">
-        <h1>Shows</h1>
-        <ul id = "show__listings" class="shows__listings"></ul>
-        
-    </main>
+    <section class="shows">
+    </section>
     <footer class="footer">
-        <section class="footer__social">
-            <h1 class="footer__social--h1">Get In Touch</h1>
-            <div class="social__icons">
-                <a href= "http://www.instagram.com"><img src="../assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon" class="icons" ></a>
-                <a href= "http://www.facebook.com"><img src="../assets/Icons/SVG/Icon-facebook.svg" alt="facebook icon" class="icons"></a>
-                <a href= "http://www.instagram.com"><img src="../assets/Icons/SVG/Icon-twitter.svg" alt="twiiter icon" class="icons"></a>
+        <section class="socials">
+            <h1 class="socials__title">Get in Touch</h1>
+            <div class="socials__links">
+                <a href="www.instagram.com"><img src="../assets/Icons/SVG/Icon-instagram.svg" alt="instagram icon" class="socials__links-icon"></a>
+                <a href="www.facebook.com"><img src="../assets/Icons/SVG/Icon-facebook.svg" alt="facebook icon" class="socials__links-icon"></a>
+                <a href="www.twitter.com"><img src="../assets/Icons/SVG/Icon-twitter.svg" alt="twitter icon" class="socials__links-icon"></a>
             </div>
         </section>
-        <div class="contact">
-            <article class="contact__container">
-                <span class="contact__heading">
-                    <p>Cam Adams<br>
-                    The Bees Knees Management</p>
-                    </span>
-                <p class="contact__address">503 Broadway Penthouse,<br>
+        <section class="contacts">
+            <div class="contacts__information">
+                <p><span class="contacts__information--bold">Cam Adams<br>
+                Bees Knees Management</p></span>
+                <p>503 Broadway Penthouse,<br>
                 New York, NY 10012, USA</p>
-                <p class="contact__email">info@thebeesknees.com</p>
-            </article>
-            <article class="contact__container">
-                <span class="contact__heading">
-                    <p>Pearl Gregg<br>
-                    Limitless Artist Group</p>
-                    </span>
-                <p class="contact__address">Booking Agent for<br>
+                <p>info@thebeesknees.com</p>
+            </div>
+            <div class="contacts__information">
+                <p><span class="contacts__information--bold">Pearl Gregg<br>
+                Limitlessd Artist Group</p></span>
+                <p>Booking Agent for<br>
                 US / South America / Japan</p>
-                <p class="contact__email">pearl.gregg@limitlessag.com</p>
-            </article>
-            <article class="contact__container">
-                <span class="contact__heading">
-                    <p>Carson Whyte<br>
-                    ARCH Entertainment</p>
-                    </span>
-                <p class="contact__address">Booking Agent for<br>
+                <p>pearl.gregg@limitlessag.com</p>
+            </div>
+            <div class="contacts__information">
+                <p><span class="contacts__information--bold">Carson Whyte<br>
+                ARCH Entertainment</p></span>
+                <p>Booking Agent for<br>
                 UK / EU / AU</p>
-                <p class="contact__email">cwhyte@archentertainment.com</p>
-            </article>
-        </div>
-        <img class="bandsite-logo" src="../assets/Logo/Logo-bandsite.svg" alt="bandsite-logo">
-        <div class="footer__endnote">Copyright The Bees Knees @ 2021 All Rights Reserved</div>
-    </footer> 
+                <p>cwhyte@archentertainment.com</p>
+            </div>
+        </section>
+        <img src="../assets/Logo/Logo-bandsite.svg" alt="band-site logo" class="footer__image">
+        <div class="footer__endnote">Copyright The Bees Knees © 2021 All Rights Reserved</div>
+    </footer>
     <script src="../scripts/build-shows-page.js"></script>
 </body>
 </html>

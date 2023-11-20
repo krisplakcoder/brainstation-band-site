@@ -1,19 +1,51 @@
-// @mixin h1__headers {
-//     font-size: 24px;
-//     font-weight: 700;
-//     line-height: 32px;
-// }
+@import './variables';
+@import './typography';
+@import './breakpoints';
 
-// @mixin subheader () {
-//     font-size: 14px;
-//     line-height: 22px;
-//     font-weight: 600;
-// }
+// Header Mixins
 
-@import 'variables';
+@mixin navbar-tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 0em;
+}
 
-@mixin divider {
-    border-bottom: 2px solid $divider-line-color;
+@mixin navbar-links {
+    width: 40%;
+    height: 3rem;
+    margin-left: 2rem;
+    padding-bottom: 0rem;
+    font-size: 1rem;
+}
+
+@mixin navbar-item-tablet {
+    width: fit-content;
+    font-size: 1rem;
+    padding-bottom: 0;
+}
+
+// Hero Bio Mixins
+
+@mixin hero-image-overlay {
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+@mixin hero-title {
+    display: block;
+    width: 15em;
+    padding: 0em;
+    bottom: 25%;
+    font-size: 4.5rem;
+    left: 5%;
 }
 
 @mixin image_size ($width){
@@ -21,108 +53,120 @@
     width: $width;
 }
 
-@mixin footer_copy {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
+// Bio mixins
+
+@mixin bio-quote-tablet {
+    font-family: 'Averni-Demi';
+        font-weight: 700;
+        font-size: 1.25rem;
+
+        @include tablet {
+            font-size: 1.8rem;
+            margin-bottom: 0;
+
+            &--size {
+                font-size: 1.5rem;
+                margin-top: 0;
+            }
+        }
 }
 
-@mixin cta-link {
-    color: $secondary-font-color;
-    font-size: 1.0rem;
-    padding-bottom: 0.5em;
-    text-decoration: none;
-    box-sizing: border-box;
-    width: 50%;
-    text-align: center;
-    border-bottom: 2px solid transparent;
+@mixin bio-title-tablet {
+    font-family: 'Averni-Demi';
+    font-size: 2.5rem;
 }
 
-@mixin body-frame ($flexdirection) {
-    margin: 0em;
+@mixin bio-subtitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+@mixin bio-article-tablet {
+
+        columns: 2;
+        margin-top: 0;
+        padding-top: 0;
+
+        > p {
+            margin-top: 0;
+        }
+}
+
+// gallery mixins 
+
+@mixin gallery-title-tablet {
+    width: 100%;
     display: flex;
-    flex-direction: $flexdirection;
-    font-family: 'Avenir-Regular';
-    max-width: 100%;
+    justify-content: start;
+    font-size: 2.5rem;
 }
 
-@mixin hero-container-style ($height) {
-    position: relative;
-    width: 100%;
-    height: $height;
-}
+//footer mixins
 
-@mixin hero-image-style {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@mixin hero-title-style {
-    position: absolute;
-    background: none;
-    top: 40%;
-    left: 10%;
-    color: white;
-    z-index: 5;
-}
-
-@mixin hero-overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    top: 0;
-    width: 100%;
-    bottom: 0;
-    height: auto;
-}
-
-@mixin navbar-design ($bgcolor, $flexdirection, $height) {
-    position: relative;
-    background-color: $bgcolor;
-    display: flex;
-    flex-direction: $flexdirection;
-    align-items: center;
-    margin-bottom: 0em;
-    padding-bottom: 12px;
-    height: $height;
-}
-
-@mixin navbar-links-design ($width, $justifycontent) {
-    width: $width;
+@mixin footer-socials-tablet {
     display: flex;
     flex-direction: row;
-    justify-content: $justifycontent;
-    // position: $position;
-    // bottom: $bottom;
+    align-items: center;
 }
 
-@mixin gallery-style {
-    background-color: $alternative-light-bg-color;
-    // box-sizing: border-box;
-    // margin-right: 0em;
-    // margin-left: 0em; 
-}
-
-@mixin footer-style {
-    background-color: $bandsite-black;
-    color: $alternative-light-bg-color;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    padding-top: 2rem;
-}
-
-@mixin icon-style ($width) {
-    display: flex;
+@mixin footer-contacts-tablet {
+    width: 90%;
+    flex-direction: row;
     justify-content: space-between;
-    width: $width;
+    margin: 0em;
 }
 
-@mixin bandsite-logo-style {
-    height: 1.25rem;
-    width: 7.5rem;
+// hero shows mixins 
+
+@mixin hero-shows-mobile {
+    font-family: 'Averni-Regular';
+    display: flex;
+    margin: 0em;
+    max-width: 100%;
+    max-height: 18em;
+    position: relative;
 }
 
+@mixin hero-shows-title-mobile {
+    font-family: 'Averni-Bold';
+    color: $white;
+    // position: absolute;
+    // bottom: 35%;
+    // left: 10%;
+    // z-index: 6;
+    font-size: 1.5rem;
+}
+
+@mixin hero-shows-music-mobile {
+    width: 100%;
+    max-height: 30%;
+    // position: absolute;
+    // left: 10%;
+    // bottom: 10%;
+    // z-index: 10;
+}
+
+@mixin hero-shows-music-tablet {
+    &__music {
+        width: 60%;
+        max-height: 40%;
+        // position: absolute;
+        // bottom:25%;
+        // left: 0;
+        padding-left: 1rem;
+        z-index: 10;
+      
+      }
+}
+
+@mixin hero-shows-music-desktop {
+    &__music {
+        width: 35%;
+        max-height: 40%;
+        // position: absolute;
+        // right: 10%;
+        // bottom: 50%;
+        // z-index: 10;
+      
+      }
+}

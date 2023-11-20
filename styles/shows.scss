@@ -1,15 +1,9 @@
-@import './partials/footer';
-@import './partials/header';
-@import './partials/variables';
-@import './partials/typography';
-@import './partials/shows-hero';
-@import './partials/shows-main';
-
+@import './partials/header.scss';
+@import './partials/footer.scss';
+@import './partials/hero-shows.scss';
+@import './partials/shows-list.scss';
 
 body {
-    margin: 0em;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
+    margin: 0;
 }

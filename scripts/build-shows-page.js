@@ -1,156 +1,141 @@
-const showSchedule = [
-    {
-    date: "Mon Sep 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA"},
+const showSchedule = [{date: "Mon Sept 06 2021", venue:"Ronald Lane", location: "San Francisco, CA"},
+    {date:"Tue Sep 21 2021", venue: "Pier 3 East", location: "San Francisco, CA"},
+    {date: "Fri Oct 15 2021", venue: "View Lounge",location: "San Francisco, CA"},
+    {date: "Sat Nov 06 2021", venue: "Hyatt Agency",location: "San Francisco, CA"},
+    {date:"Fri Nov 26 2021", venue: "Moscow Center",location: "San Francisco, CA"},
+    {date: "Wed Dec 15 2021", venue: "Press Club",location: "San Francisco, CA"}
+];
 
-    {
-        date: "Tue Sep 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
+const labels = ["DATE","VENUE", "LOCATION"];
 
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
+const showContainerTag = document.querySelector(".shows");
 
-    {
-        date: "Fri Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
+// A function that prints for column
 
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
+function printShow() {
 
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA"
+    let showTag = document.createElement('h1');
+    showTag.classList.add("shows__heading");
+    showTag.innerText = "Shows";
+    showContainerTag.appendChild(showTag);
+}
+
+function printScheduleLabel (label) {
+
+    let labelTag = document.createElement('li');
+    labelTag.classList.add("shows__label");
+    labelTag.innerText = label;
+    return labelTag;
+}
+
+
+function printListDataBold (arrayIndex) {
+    let dataTag = document.createElement('li');
+    dataTag.classList.add("shows__detail", "shows__detail--bold");
+    dataTag.innerText = arrayIndex;
+    return dataTag;
+}
+
+function printListData (arrayIndex) {
+
+    let dataTag = document.createElement('li');
+    dataTag.classList.add("shows__detail");
+    dataTag.innerText = arrayIndex;
+    return dataTag;
+}
+
+function printButton() {
+    let btn = document.createElement('button')
+    btn.classList.add('cta-shows');
+    btn.innerText = "Buy Tickets";
+    return btn;
+}
+
+function printScheduleTablet() {
+
+    printShow();
+
+    let ulTag = document.createElement('ul');
+    ulTag.classList.add("shows-schedule", "shows-schedule--flex");
+    showContainerTag.appendChild(ulTag);
+
+    for (i = 0; i < labels.length; i++) {
+        ulTag.appendChild(printScheduleLabel(labels[i]));
     }
 
-]
+    for (j = 0; j < showSchedule.length; j++) {
+        
+        let ulTag = document.createElement('ul');
+        ulTag.classList.add("shows-schedule");
+        showContainerTag.appendChild(ulTag);
 
-// <ul class="shows__list">
-//             <li class="shows__details">
-//                 <p><span class= "shows--title">Date</span></p>
-//                 <p><span class = "shows--bold">Mon Sep 06 2021</span></p>
-//                 <p><span class= "shows--title">Venue</span></p>
-//                 <p>Ronald Lane</p>
-//                 <p><span class= "shows--title">Location</span></p>
-//                 <p>San Francisco, CA</p>
-//                 <button class="shows__button">BUY TICKETS</button>
-//             </li>
-//         </ul>
-const minScreen = window.matchMedia('(min-width: 787px)');
-let newList = document.getElementById("show__listings");
-
-// printShow(showSchedule, screen.width);
-
-minScreen.addEventListener('change', printShow(showSchedule, screen.width));
-
-function printShow (array, x) {
-
-    if (x < 787) {
+        ulTag.appendChild(printListDataBold(showSchedule[j].date));
+        ulTag.appendChild(printListData(showSchedule[j].venue));
+        ulTag.appendChild(printListData(showSchedule[j].location));
+        ulTag.appendChild(printButton());
 
 
-        for (i = 0; i < array.length; i++) {
+    }
+}
 
-            let newListItem = document.createElement('li');
-            newListItem.classList.add('shows__details', 'shows--border', 'shows__list');
-            newList.appendChild(newListItem);
+function printScheduleMobile() {
 
-            let paraFirstLine = document.createElement('p');
-            paraFirstLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraFirstLine);
-            paraFirstLine.innerText = "DATE";
+    // const labels = ["DATA","VENUE", "LOCATION"];
+    printShow();
 
-            let paraSecondLine = document.createElement('p');
-            paraSecondLine.classList.add('shows__details', 'shows--bold');
-            newListItem.appendChild(paraSecondLine);
-            paraSecondLine.innerText = array[i].date;
+    for (j = 0; j < showSchedule.length; j++) {
 
-            let paraThirdLine = document.createElement('p');
-            paraThirdLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraThirdLine);
-            paraThirdLine.innerText = "VENUE";
+        let ulTag = document.createElement('ul');
+        ulTag.classList.add("shows-schedule");
+        showContainerTag.appendChild(ulTag);
 
-            let paraFourthLine = document.createElement('p');
-            paraFourthLine.classList.add('shows__details');
-            newListItem.appendChild(paraFourthLine);
-            paraFourthLine.innerText = array[i].venue;
+        for (i = 0; i < labels.length; i++) {
 
-            let paraFifthLine = document.createElement('p');
-            paraFifthLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraFifthLine);
-            paraFifthLine.innerText = "LOCATION";
+            ulTag.appendChild(printScheduleLabel(labels[i]));
 
-            let paraSixthLine = document.createElement('p');
-            paraSixthLine.classList.add('shows__details');
-            newListItem.appendChild(paraSixthLine);
-            paraSixthLine.innerText = array[i].location;
+            if (labels[i] === 'DATE') {
+                ulTag.appendChild(printListDataBold(showSchedule[j].date));
+            } else if (labels[i] === 'VENUE') {
+                ulTag.appendChild(printListData(showSchedule[j].venue));
 
-            const showButton = document.createElement('button')
-            showButton.classList.add('shows__button');
-            newListItem.appendChild(showButton);
-            showButton.innerText = "Buy Tickets";
-        }
-    } else {
-            let newListItem = document.createElement('li');
-            newListItem.classList.add('shows__category');
-            newList.appendChild(newListItem);
-
-            let paraFirstLine = document.createElement('p');
-            paraFirstLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraFirstLine);
-            paraFirstLine.innerText = "DATE";
-
-            let paraThirdLine = document.createElement('p');
-            paraThirdLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraThirdLine);
-            paraThirdLine.innerText = "VENUE";
-
-            let paraFifthLine = document.createElement('p');
-            paraFifthLine.classList.add("shows__details", "shows__title");
-            newListItem.appendChild(paraFifthLine);
-            paraFifthLine.innerText = "LOCATION";
-
-            for (i = 0; i < array.length; i++) {
-
-                let newListItem = document.createElement('li');
-                newListItem.classList.add('shows__details', 'shows--border', 'shows__list');
-                newList.appendChild(newListItem);
-
-                let paraSecondLine = document.createElement('p');
-                paraSecondLine.classList.add('shows__details', 'shows--bold');
-                newListItem.appendChild(paraSecondLine);
-                paraSecondLine.innerText = array[i].date;
-
-    
-                let paraFourthLine = document.createElement('p');
-                paraFourthLine.classList.add('shows__details');
-                newListItem.appendChild(paraFourthLine);
-                paraFourthLine.innerText = array[i].venue;
-
-                let paraSixthLine = document.createElement('p');
-                paraSixthLine.classList.add('shows__details');
-                newListItem.appendChild(paraSixthLine);
-                paraSixthLine.innerText = array[i].location;
-
-                const showButton = document.createElement('button')
-                showButton.classList.add('shows__button');
-                newListItem.appendChild(showButton);
-                showButton.innerText = "Buy Tickets";
+            } else if (labels[i] === 'LOCATION') {
+                ulTag.appendChild(printListData(showSchedule[j].location));
             }
-
+            
         }
-
+        ulTag.appendChild(printButton());
     }
+
+}
+
+
+const runShowSchedule = () => {
+    let watchScreenSize = window.matchMedia('(max-width: 767px)');
+    let showsTag = document.querySelector(".shows");
+
+
+    const listenScreenSize = query => {
+        
+
+        if (query.matches) {
+            showsTag.innerHTML = " ";
+            // document.body.style.backgroundColor = "purple";
+            printScheduleMobile();
+        } else {
+            showsTag.innerHTML = " ";
+            // document.body.style.backgroundColor = 'red';
+            printScheduleTablet();
+        }
+    }
+
+    watchScreenSize.addEventListener('change', listenScreenSize)
+    listenScreenSize(watchScreenSize)
+
+
+}
+
+
+runShowSchedule();
 
 const buttons = document.getElementsByTagName('button');
 
@@ -167,6 +152,3 @@ const buttonPressed = e => {
 for (let button of buttons) {
     button.addEventListener('click', buttonPressed);
 }
-
-
-

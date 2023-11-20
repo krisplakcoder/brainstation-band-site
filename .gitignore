@@ -13,3 +13,9 @@ CopyDeck
 *.css.map
 
 side.js
+
+oldstuff/
+
+build-shows-page-source.js
+
+testing.html
