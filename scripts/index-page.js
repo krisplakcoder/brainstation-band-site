@@ -5,7 +5,6 @@ const APIKEY = {"api_key":"786b5d53-7b33-4879-9c76-32d0d5cdb7ef"};
 const COMMENTS = new BandSiteApi(APIKEY.api_key);
 const commentList = await COMMENTS.getComments();
 
-console.log(commentList.data);
 
 function printComment(obj) {
 
@@ -58,3 +57,37 @@ function dateConvertor(date) {
     let newDate = new Date(date);
     return newDate.toDateString();
 }
+
+let commentFormEl = document.querySelector(".comments__form");
+
+commentFormEl.addEventListener('submit', async (event) => {
+
+    event.preventDefault();
+
+    const newComment = {
+        name: event.target.name.value,
+        comment: event.target.comment.value,
+      };
+
+    
+
+    await COMMENTS.postComment(newComment);
+    console.log(newComment);
+
+    document.querySelector(".comments__list").innerHTML = " ";
+
+    let commentList = await COMMENTS.getComments();
+
+
+    let sortedArray = commentList.data.sort(
+        (date1, date2) => (date1.timestamp < date2.timestamp) ? 1: (date1.timestamp > date2.timestamp) ? -1 : 0);
+
+        console.log(sortedArray);
+    
+
+    for (let i = 0; i < sortedArray.length; i++) {
+        printComment(sortedArray[i]);
+    };  
+
+    commentFormEl.reset();
+})

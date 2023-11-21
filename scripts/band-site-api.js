@@ -6,9 +6,16 @@ class BandSiteApi {
         this.baseUrl = "https://project-1-api.herokuapp.com/"; 
     }
 
-    // postComment(comment) {
+    async postComment(obj) {
         
-    // }
+            try {
+                const response = await axios.post(
+                    this.baseUrl + "comments/?api_key=" + this.apiKey,
+                    obj
+                ); console.log(response.data);
+            } catch (error) {console.error(error)}
+        
+    }
 
     async getComments() {
         const commentList = await axios.get(this.baseUrl + "comments/?api_key=" + this.apiKey);
@@ -17,7 +24,6 @@ class BandSiteApi {
 
     async getShows() {
         const showsList = await axios.get(this.baseUrl + "showdates/?api_key=" + this.apiKey);
-        // console.log(showsList);
         return showsList;
     }
 }
