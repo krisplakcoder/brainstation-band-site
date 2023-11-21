@@ -1,0 +1,52 @@
+@import 'mixins';
+@import 'variables';
+@import 'breakpoints';
+@import 'typography';
+
+.image {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.comments__list {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+}
+.comments-section {
+
+    font-family: 'Averni-Regular';
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8125rem;
+    width: 100%;
+    margin-top: 1rem;
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 1rem;
+        
+        &-section {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+.name {
+    font-weight: 700;
+}
+
+.date {
+    color: $silver;
+}

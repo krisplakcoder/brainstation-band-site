@@ -3,7 +3,6 @@ const APIKEY = {"api_key":"786b5d53-7b33-4879-9c76-32d0d5cdb7ef"};
 
 const newShows = new BandSiteApi(APIKEY.api_key);
 const newShowSchedule = await newShows.getShows();
-console.log(newShowSchedule.data);
 
 // const showSchedule = [{date: "Mon Sept 06 2021", venue:"Ronald Lane", location: "San Francisco, CA"},
 //     {date:"Tue Sep 21 2021", venue: "Pier 3 East", location: "San Francisco, CA"},
@@ -163,3 +162,4 @@ function dateConvertor(date) {
     let newDate = new Date(date);
     return newDate.toDateString();
 }
+

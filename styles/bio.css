@@ -755,7 +755,6 @@ header {
   }
 }
 .comments__container {
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -794,7 +793,7 @@ header {
 }
 
 .comment-form > label {
-  color: #E1E1E1;
+  color: #AFAFAF;
   font-size: 0.8125rem;
   margin-top: 1rem;
 }
@@ -833,6 +832,84 @@ header {
 
 .image__container {
   padding-top: 0.5rem;
+}
+
+@font-face {
+  font-family: "Averni-Regular";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averni-Bold";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  font-style: bold;
+}
+@font-face {
+  font-family: "Averni-Demi";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Averni-Regular";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averni-Bold";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.woff2") format("woff2");
+  font-style: bold;
+}
+@font-face {
+  font-family: "Averni-Demi";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+.image {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+.comments-section {
+  font-family: "Averni-Regular";
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8125rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.comments-section__details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 1rem;
+}
+.comments-section__details-section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.date {
+  color: #AFAFAF;
 }
 
 body {
