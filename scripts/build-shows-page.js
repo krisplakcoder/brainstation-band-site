@@ -146,7 +146,7 @@ const buttons = document.getElementsByTagName('button');
 
 const buttonPressed = e => {
     
-    for (i = 0; i < buttons.length; i++){
+    for (let i = 0; i < buttons.length; i++){
         if (buttons[i] === e.target) {
             if (buttons[i].parentElement.style.backgroundColor === "gainsboro") { buttons[i].parentElement.style.backgroundColor = "white";}
             else {buttons[i].parentElement.style.backgroundColor = "gainsboro";}

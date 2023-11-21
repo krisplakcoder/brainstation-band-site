@@ -239,6 +239,7 @@ header {
     bottom: 25%;
     font-size: 4.5rem;
     left: 5%;
+    width: 40rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -455,6 +456,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  background-color: #FAFAFA;
 }
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .gallery {
@@ -748,10 +750,32 @@ header {
   padding: 0 1rem;
   font-family: "Averni-Regular";
 }
-@__header {
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .comments {
-    font-family: "Averni-Demi";
-    font-weight: 700;
+    border: 1px solid pink;
+    align-items: start;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments {
+    height: auto;
+  }
+}
+.comments__header {
+  font-family: "Averni-Demi";
+  font-weight: 700;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments__header {
+    font-size: 2.5rem;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__header {
+    font-size: 2.5rem;
+    padding-left: 8rem;
   }
 }
 .comments__container {
@@ -759,13 +783,44 @@ header {
   flex-direction: row;
   align-items: start;
   justify-content: flex-start;
-  width: 100%;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments__container {
+    border: 1px solid green;
+    justify-content: end;
+    width: 80%;
+    padding-left: 7rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__container {
+    width: 66%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #E1E1E1;
+  }
 }
 .comments__form {
   display: flex;
   flex-direction: column;
   flex: 2;
   padding-left: 1rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments__form {
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__form {
+    align-items: end;
+  }
 }
 .comments__image {
   height: 2.25rem;
@@ -778,11 +833,25 @@ header {
 .name-form, .comment-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .name-form, .comment-form {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .name-form, .comment-form {
+    width: 100%;
+  }
 }
 .name-form > label, .comment-form > label {
   color: #E1E1E1;
   font-size: 0.8125rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .name-form > label, .comment-form > label {
+    font-size: 0.875rem;
+  }
 }
 .name-form__input, .comment-form__input {
   border: 1px solid #E1E1E1;
@@ -790,8 +859,17 @@ header {
   border-radius: 4px;
   box-shadow: none;
   height: 1.5rem;
+  text-align: start;
+}
+@media screen and (min-width: 1280px) {
+  .name-form__input, .comment-form__input {
+    height: 2rem;
+  }
 }
 
+.comment-form {
+  font-family: "Averni-Regular";
+}
 .comment-form > label {
   color: #AFAFAF;
   font-size: 0.8125rem;
@@ -799,6 +877,11 @@ header {
 }
 .comment-form__input {
   height: 5rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-form__input {
+    height: 10rem;
+  }
 }
 
 .cta-comments {
@@ -809,7 +892,6 @@ header {
   border-radius: 0.25rem;
   border: none;
   height: 2.5rem;
-  width: 100%;
   text-transform: uppercase;
   font-size: 0.875rem;
   margin-top: 1rem;
@@ -820,8 +902,8 @@ header {
 }
 @media screen and ((min-width: 768px) and (max-width: 1279px)) {
   .cta-comments {
-    width: 25%;
     font-size: 0.75rem;
+    width: 150px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -869,6 +951,8 @@ header {
 .image {
   height: 2rem;
   width: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
   border-radius: 50%;
   background-color: gray;
 }
@@ -877,10 +961,15 @@ header {
   display: flex;
   flex-direction: column;
   height: auto;
-  width: auto;
-  max-width: 100%;
-  padding: 0 1rem;
   margin: 0;
+}
+@media screen and (min-width: 1280px) {
+  .comments__list {
+    max-width: 66%;
+    margin: auto;
+    font-size: 1.25rem;
+    align-items: center;
+  }
 }
 
 .comments-section {
@@ -888,20 +977,45 @@ header {
   display: flex;
   flex-direction: row;
   font-size: 0.8125rem;
-  width: 100%;
   margin-top: 1rem;
+  padding: 0 1rem 1rem 0;
+  border-bottom: 1px solid #E1E1E1;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments-section {
+    font-size: 1rem;
+    padding: 0 12.5%;
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments-section {
+    font-size: 1rem;
+    width: 100%;
+  }
 }
 .comments-section__details {
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and ((min-width: 768px) and (max-width: 1279px)) {
+  .comments-section__details {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments-section__details {
+    width: 100%;
+  }
 }
 .comments-section__details-section {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .name {

@@ -553,7 +553,7 @@ header {
 }
 @media screen and (min-width: 1280px) {
   .shows__heading {
-    padding-left: 8rem;
+    padding-left: 10rem;
     padding-top: 4rem;
     font-size: 2.5rem;
   }

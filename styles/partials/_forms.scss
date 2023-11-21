@@ -10,9 +10,30 @@
     padding: 0 1rem;
     font-family: 'Averni-Regular';
 
-    @__header {
+    
+    @include tablet {
+        border: 1px solid pink;
+        align-items: start;
+        max-width: 100%;
+    }
+
+    @include desktop {
+        height: auto;
+    }
+
+    &__header {
         font-family: 'Averni-Demi';
         font-weight: 700;
+
+        @include tablet {
+            font-size: 2.5rem;
+            padding-left: 2rem;
+        }
+
+        @include desktop {
+            font-size: 2.5rem;
+            padding-left: 8rem;
+        }
     }
 
     &__container {
@@ -21,7 +42,27 @@
         flex-direction: row;
         align-items: start;
         justify-content: flex-start;
-        width: 100%;
+
+
+        @include tablet {            
+            border: 1px solid green;
+            justify-content: end;
+            width: 80%;
+            padding-left: 7rem;
+            padding-right: 2rem; 
+        }
+
+        @include desktop {
+            width: 66%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid $mercury;
+
+            
+        }
     }
 
     &__form {
@@ -30,6 +71,16 @@
         flex-direction: column;
         flex: 2;
         padding-left: 1rem;
+
+        @include tablet {
+            justify-content: end;
+            align-items: end;
+            width: 100%;
+        }
+
+        @include desktop {
+            align-items: end;
+        }
 
       
     }
@@ -46,11 +97,22 @@
 .name-form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+
+    @include tablet {
+        width: 100%;
+    }
+
+    @include desktop {
+        width: 100%;
+    }
 
     & > label {
         color: $mercury;
         font-size: 0.8125rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+        }
     }
     &__input {
 
@@ -59,6 +121,11 @@
         border-radius: 4px;
         box-shadow: none;
         height: 1.5rem;
+        text-align: start;
+
+        @include desktop {
+            height: 2rem;
+        }
 
     }
 }
@@ -67,7 +134,8 @@
 
 .comment-form {
     @extend .name-form;
-
+    font-family: 'Averni-Regular';
+  
     & > label {
         color: $silver;
         font-size: 0.8125rem;
@@ -78,7 +146,9 @@
         @extend .name-form__input;
         height: 5rem;
 
-
+          @include desktop{
+            height: 10rem;
+        }
     }
 }
 
@@ -90,7 +160,6 @@
     border-radius: 0.25rem;
     border: none;
     height: 2.5rem;
-    width: 100%;
     text-transform: uppercase;
     font-size: 0.875rem;
     margin-top: 1rem;
@@ -102,8 +171,8 @@
     }
 
     @include tablet {
-        width: 25%;
-        font-size: 0.75rem;         
+        font-size: 0.75rem;
+        width: 150px;
     }
 
     @include desktop {

@@ -45,6 +45,7 @@
 
         @include tablet {
             @include hero-title;
+            width: 40rem;
         }
 
         @include desktop {
