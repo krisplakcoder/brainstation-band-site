@@ -1,5 +1,3 @@
-//const apikeyobj = JSON.parse(APIKEY);
-
 
 class BandSiteApi {
 
