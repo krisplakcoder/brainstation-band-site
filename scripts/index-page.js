@@ -72,7 +72,6 @@ commentFormEl.addEventListener('submit', async (event) => {
     
 
     await COMMENTS.postComment(newComment);
-    console.log(newComment);
 
     document.querySelector(".comments__list").innerHTML = " ";
 
@@ -82,7 +81,6 @@ commentFormEl.addEventListener('submit', async (event) => {
     let sortedArray = commentList.data.sort(
         (date1, date2) => (date1.timestamp < date2.timestamp) ? 1: (date1.timestamp > date2.timestamp) ? -1 : 0);
 
-        console.log(sortedArray);
     
 
     for (let i = 0; i < sortedArray.length; i++) {

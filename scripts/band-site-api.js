@@ -12,7 +12,7 @@ class BandSiteApi {
                 const response = await axios.post(
                     this.baseUrl + "comments/?api_key=" + this.apiKey,
                     obj
-                ); console.log(response.data);
+                ); 
             } catch (error) {console.error(error)}
         
     }

@@ -2,7 +2,6 @@
 @import './typography';
 @import './breakpoints';
 
-// Header Mixins
 
 @mixin navbar-tablet {
     flex-direction: row;
@@ -26,7 +25,6 @@
     padding-bottom: 0;
 }
 
-// Hero Bio Mixins
 
 @mixin hero-image-overlay {
     background-color: rgba(0,0,0,0.5);
@@ -53,7 +51,6 @@
     width: $width;
 }
 
-// Bio mixins
 
 @mixin bio-quote-tablet {
     font-family: 'Averni-Demi';
@@ -92,7 +89,6 @@
         }
 }
 
-// gallery mixins 
 
 @mixin gallery-title-tablet {
     width: 100%;
@@ -101,7 +97,6 @@
     font-size: 2.5rem;
 }
 
-//footer mixins
 
 @mixin footer-socials-tablet {
     display: flex;
@@ -116,7 +111,6 @@
     margin: 0em;
 }
 
-// hero shows mixins 
 
 @mixin hero-shows-mobile {
     font-family: 'Averni-Regular';
@@ -130,29 +124,21 @@
 @mixin hero-shows-title-mobile {
     font-family: 'Averni-Bold';
     color: $white;
-    // position: absolute;
-    // bottom: 35%;
-    // left: 10%;
-    // z-index: 6;
+   
     font-size: 1.5rem;
 }
 
 @mixin hero-shows-music-mobile {
     width: 100%;
     max-height: 30%;
-    // position: absolute;
-    // left: 10%;
-    // bottom: 10%;
-    // z-index: 10;
+    
 }
 
 @mixin hero-shows-music-tablet {
     &__music {
         width: 60%;
         max-height: 40%;
-        // position: absolute;
-        // bottom:25%;
-        // left: 0;
+       
         padding-left: 1rem;
         z-index: 10;
       
@@ -163,10 +149,6 @@
     &__music {
         width: 35%;
         max-height: 40%;
-        // position: absolute;
-        // right: 10%;
-        // bottom: 50%;
-        // z-index: 10;
       
       }
 }

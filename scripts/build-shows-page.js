@@ -4,19 +4,11 @@ const APIKEY = {"api_key":"786b5d53-7b33-4879-9c76-32d0d5cdb7ef"};
 const newShows = new BandSiteApi(APIKEY.api_key);
 const newShowSchedule = await newShows.getShows();
 
-// const showSchedule = [{date: "Mon Sept 06 2021", venue:"Ronald Lane", location: "San Francisco, CA"},
-//     {date:"Tue Sep 21 2021", venue: "Pier 3 East", location: "San Francisco, CA"},
-//     {date: "Fri Oct 15 2021", venue: "View Lounge",location: "San Francisco, CA"},
-//     {date: "Sat Nov 06 2021", venue: "Hyatt Agency",location: "San Francisco, CA"},
-//     {date:"Fri Nov 26 2021", venue: "Moscow Center",location: "San Francisco, CA"},
-//     {date: "Wed Dec 15 2021", venue: "Press Club",location: "San Francisco, CA"}
-// ];
 
 
 const labels = ["DATE","VENUE", "LOCATION"];
 const showContainerTag = document.querySelector(".shows");
 
-// A function that prints for column
 
 function printShow() {
 
@@ -86,7 +78,6 @@ function printScheduleTablet() {
 
 function printScheduleMobile() {
 
-    // const labels = ["DATA","VENUE", "LOCATION"];
     printShow();
 
     for (let j = 0; j < newShowSchedule.data.length; j++) {
@@ -125,11 +116,9 @@ const runShowSchedule = () => {
 
         if (query.matches) {
             showsTag.innerHTML = " ";
-            // document.body.style.backgroundColor = "purple";
             printScheduleMobile();
         } else {
             showsTag.innerHTML = " ";
-            // document.body.style.backgroundColor = 'red';
             printScheduleTablet();
         }
     }
